@@ -35,24 +35,16 @@ export default function ContactForm() {
     setError(null);
     
     try {
-      if (FORMSPREE_ID === "TU_ID_AQUI") {
-        // Simulación si no hay ID configurado
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        console.log("Form Data (Simulación):", data);
-        // Descomentar la siguiente línea para mostrar error de configuración en lugar de éxito simulado
-        // throw new Error("Falta configurar el ID del formulario");
-      } else {
-        const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-        });
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
 
-        if (!response.ok) {
-          throw new Error("Error al enviar el formulario");
-        }
+      if (!response.ok) {
+        throw new Error("Error al enviar el formulario");
       }
 
       setIsSuccess(true);

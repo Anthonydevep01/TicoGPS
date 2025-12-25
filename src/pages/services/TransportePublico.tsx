@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
-import { Bus, Car, Map, Smartphone, Shield, Users, ArrowRight } from "lucide-react";
+import { Bus, Car, Smartphone, Shield, Users, ArrowRight } from "lucide-react";
 
 export default function TransportePublico() {
   return (

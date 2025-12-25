@@ -1,6 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import { Link } from "react-router-dom";
-import { Shield, FileText, CheckCircle, AlertTriangle, Phone, Scale } from "lucide-react";
+import { Scale } from "lucide-react";
 
 export default function TerminosCondiciones() {
   return (

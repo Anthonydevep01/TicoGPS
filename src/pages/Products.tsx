@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import { ShoppingCart, Check, Info, ChevronLeft, ChevronRight, Eye, Plus, Minus } from "lucide-react";
+import { ShoppingCart, Check, Plus, Minus } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { products } from "@/data/products";

@@ -2,7 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { products, Product } from "@/data/products";
-import { Check, ChevronRight, ShoppingCart, Store, Minus, Plus, Share2, ChevronLeft } from "lucide-react";
+import { Check, ChevronRight, ShoppingCart, Store, Minus, Plus, ChevronLeft } from "lucide-react";
 import ShareButton from "@/components/common/ShareButton";
 import { useCart } from "@/context/CartContext";
 

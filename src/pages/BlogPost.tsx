@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, Calendar, User, Clock, Share2 } from "lucide-react";
+import { Calendar, User, Tag, Clock } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useState, useEffect } from "react";
@@ -44,7 +44,6 @@ interface BlogPost {
 
 export default function BlogPost() {
   const { slug } = useParams();
-  const navigate = useNavigate();
   const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
 

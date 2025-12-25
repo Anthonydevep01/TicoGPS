@@ -1,6 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import { Link } from "react-router-dom";
-import { Shield, Lock, EyeOff, UserCheck, FileText, MapPin } from "lucide-react";
+import { Lock } from "lucide-react";
 
 export default function PoliticasPrivacidad() {
   return (

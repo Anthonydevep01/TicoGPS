@@ -1,5 +1,5 @@
-import Layout from '@/components/layout/Layout';
-import { Home, PenTool, MapPin, Calendar } from 'lucide-react';
+import Layout from "@/components/layout/Layout";
+import { MapPin, Calendar, Clock, CheckCircle2, Wrench, ShieldCheck } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 export default function InstalacionDomicilio() {

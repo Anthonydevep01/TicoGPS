@@ -1,6 +1,5 @@
 import { useCart } from "@/context/CartContext";
 import { X, Trash2, Plus, Minus, ShoppingCart, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 
 export default function CartSidebar() {
   const { items, isOpen, toggleCart, removeFromCart, updateQuantity, totalPrice } = useCart();

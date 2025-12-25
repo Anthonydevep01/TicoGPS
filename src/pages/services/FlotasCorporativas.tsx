@@ -1,5 +1,5 @@
-import Layout from '@/components/layout/Layout';
-import { Truck, BarChart3, Map, Fuel } from 'lucide-react';
+import Layout from "@/components/layout/Layout";
+import { BarChart, Map, Shield, Smartphone, Clock, Zap } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 export default function FlotasCorporativas() {

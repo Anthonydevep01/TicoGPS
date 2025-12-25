@@ -3,7 +3,6 @@ import { useState, useRef, useEffect } from "react";
 
 interface ShareButtonProps {
   url?: string;
-  title?: string;
   text?: string;
   className?: string;
   variant?: "icon" | "button" | "floating";
@@ -11,7 +10,6 @@ interface ShareButtonProps {
 
 export default function ShareButton({ 
   url = window.location.href, 
-  title = document.title, 
   text = "Mira este contenido de TicoGPS", 
   className = "",
   variant = "icon"
