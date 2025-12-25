@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Static Pages -->
+  <url>
+    <loc>https://ticogps.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ticogps.com/servicios</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ticogps.com/productos</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ticogps.com/ubicaciones</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ticogps.com/nosotros</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ticogps.com/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ticogps.com/contacto</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ticogps.com/terminos-condiciones</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ticogps.com/politica-privacidad</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Service Pages -->
+  <url><loc>https://ticogps.com/servicios/autos-particulares</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/servicios/flotas-corporativas</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/servicios/maquinaria-pesada</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/servicios/monitoreo-tiempo-real</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/servicios/instalacion-domicilio</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/servicios/transporte-publico</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/servicios/transporte-publico/app-taxis</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/servicios/transporte-publico/autobuses</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Product Pages -->
+  <url><loc>https://ticogps.com/productos/taximetro-todo-en-uno</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ticogps.com/productos/taximetro-sencillo</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ticogps.com/productos/impresora-taximetro</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/productos/parlante-taximetro</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/productos/microprocesador</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/productos/gps-tracker</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ticogps.com/productos/cable-cat6</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/productos/conector-rj45</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/productos/inmovilizador-vehicular</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- Location Pages -->
+  <url><loc>https://ticogps.com/ubicaciones/san-jose</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/ubicaciones/alajuela</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/ubicaciones/cartago</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/ubicaciones/heredia</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/ubicaciones/guanacaste</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/ubicaciones/puntarenas</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ticogps.com/ubicaciones/limon</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>

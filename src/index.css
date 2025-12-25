@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background: Almond Cream 900 (Very light warm white) */
+    --background: 36 29% 97%;
+    /* Foreground: Coffee Bean 100 (Almost black brown) */
+    --foreground: 26 40% 7%;
+    
+    /* Card: White */
+    --card: 0 0% 100%;
+    --card-foreground: 26 40% 7%;
+    
+    /* Popover: White */
+    --popover: 0 0% 100%;
+    --popover-foreground: 26 40% 7%;
+    
+    /* Primary: Coffee Bean (Brand Brown) */
+    --primary: 24 38% 36%;
+    --primary-foreground: 29 42% 88%; /* Almond Cream */
+    
+    /* Secondary: Camel (Light Brown) */
+    --secondary: 33 26% 52%;
+    --secondary-foreground: 26 40% 7%;
+    
+    /* Muted: Almond Cream 600 */
+    --muted: 29 42% 90%;
+    --muted-foreground: 24 37% 29%;
+    
+    /* Accent: Dusty Olive */
+    --accent: 74 19% 36%;
+    --accent-foreground: 29 42% 88%;
+    
+    /* Destructive */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    
+    /* Border: Camel 800 */
+    --border: 34 26% 81%;
+    --input: 34 26% 81%;
+    --ring: 24 38% 36%;
+    
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    /* Background: Ebony 100 (Deep organic dark) */
+    --background: 75 17% 5%;
+    /* Foreground: Almond Cream */
+    --foreground: 29 42% 88%;
+    
+    /* Card: Ebony 200 */
+    --card: 80 18% 10%;
+    --card-foreground: 29 42% 88%;
+    
+    /* Popover: Ebony 200 */
+    --popover: 80 18% 10%;
+    --popover-foreground: 29 42% 88%;
+    
+    /* Primary: Camel (Lighter brown for contrast) */
+    --primary: 33 26% 52%;
+    --primary-foreground: 75 17% 5%;
+    
+    /* Secondary: Dusty Olive */
+    --secondary: 74 19% 36%;
+    --secondary-foreground: 29 42% 88%;
+    
+    /* Muted: Ebony 300 */
+    --muted: 81 17% 24%;
+    --muted-foreground: 34 26% 60%;
+    
+    /* Accent: Coffee Bean */
+    --accent: 24 38% 36%;
+    --accent-foreground: 29 42% 88%;
+    
+    /* Destructive */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    
+    /* Border: Ebony */
+    --border: 81 17% 24%;
+    --input: 81 17% 24%;
+    --ring: 33 26% 52%;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+}
+ 
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
