@@ -113,13 +113,15 @@ export default function BlogPost() {
     )
   }
 
+  const absoluteImage = post.image.startsWith('http') ? post.image : `https://ticogps.com${post.image}`;
+
   return (
     <Layout
       seo={{
         title: `${post.title} | Blog TicoGPS`,
         description: post.excerpt,
         canonical: `https://ticogps.com/blog/${post.slug}`,
-        image: post.image,
+        image: absoluteImage,
         type: "article"
       }}
     >
