@@ -41,7 +41,7 @@ export default function SEO({
     },
     "url": "https://ticogps.com",
     "sameAs": [
-      "https://facebook.com/ticogps",
+      "https://www.facebook.com/profile.php?id=61585416941658",
       "https://instagram.com/ticogps"
     ],
     "openingHoursSpecification": [
