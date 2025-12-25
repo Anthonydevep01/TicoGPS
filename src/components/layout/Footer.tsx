@@ -17,8 +17,8 @@ export default function Footer() {
               Tecnología de punta para tu tranquilidad.
             </p>
             <div className="flex gap-4 items-center">
-              <a href="https://www.facebook.com/profile.php?id=61585416941658" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Facebook className="h-5 w-5" /></a>
-              <a href="#" className="hover:text-white transition-colors"><Instagram className="h-5 w-5" /></a>
+              <a href="https://www.facebook.com/profile.php?id=61585416941658" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Facebook"><Facebook className="h-5 w-5" /></a>
+              <a href="https://www.instagram.com/ticogpscr" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Instagram"><Instagram className="h-5 w-5" /></a>
               <ShareButton className="hover:text-white text-almond_cream-500" />
             </div>
           </div>
