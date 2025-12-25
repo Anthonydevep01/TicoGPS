@@ -15,16 +15,17 @@ export default function SEO({
   canonical = 'https://ticogps.com',
   type = 'website',
   name = 'TicoGPS',
-  image = 'https://ticogps.com/og-image.jpg' // Placeholder
+  image = '/images/TicoGPS-main-banner.jpg'
 }: SEOProps) {
   
   const siteTitle = title === 'TicoGPS' ? title : `${title} | TicoGPS`;
+  const absoluteImage = image.startsWith('http') ? image : `https://ticogps.com${image}`;
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "TicoGPS",
-    "image": image,
+    "image": absoluteImage,
     "telephone": "+506 8953-5649",
     "email": "serviticogps@gmail.com",
     "address": {
@@ -72,7 +73,7 @@ export default function SEO({
       <meta property="og:type" content={type} />
       <meta property="og:title" content={siteTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={absoluteImage} />
       <meta property="og:url" content={canonical} />
       <meta property="og:site_name" content={name} />
 
@@ -80,7 +81,7 @@ export default function SEO({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={siteTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={absoluteImage} />
 
       {/* Schema.org Structured Data */}
       <script type="application/ld+json">
