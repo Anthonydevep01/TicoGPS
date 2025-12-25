@@ -86,18 +86,34 @@ export default function Header() {
                 
                 return (
                   <div key={item.name} className="relative group flex items-center">
-                    <button
-                      className={cn(
-                        "text-base font-bold transition-all duration-200 decoration-2 underline-offset-4 flex items-center",
-                        "hover:text-primary hover:underline",
-                        isActive 
-                      ? "text-primary underline" 
-                          : "text-slate-900"
-                      )}
-                    >
-                      {item.name}
-                      <ChevronDown className="ml-1 h-4 w-4" />
-                    </button>
+                    {item.href === '#' ? (
+                      <button
+                        className={cn(
+                          "text-base font-bold transition-all duration-200 decoration-2 underline-offset-4 flex items-center",
+                          "hover:text-primary hover:underline",
+                          isActive 
+                        ? "text-primary underline" 
+                            : "text-slate-900"
+                        )}
+                      >
+                        {item.name}
+                        <ChevronDown className="ml-1 h-4 w-4" />
+                      </button>
+                    ) : (
+                      <Link
+                        to={item.href}
+                        className={cn(
+                          "text-base font-bold transition-all duration-200 decoration-2 underline-offset-4 flex items-center",
+                          "hover:text-primary hover:underline",
+                          isActive 
+                        ? "text-primary underline" 
+                            : "text-slate-900"
+                        )}
+                      >
+                        {item.name}
+                        <ChevronDown className="ml-1 h-4 w-4" />
+                      </Link>
+                    )}
                     
                     {/* Dropdown Menu */}
                     <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-md shadow-lg border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
