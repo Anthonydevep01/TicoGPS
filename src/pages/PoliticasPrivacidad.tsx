@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import { Lock, EyeOff, UserCheck, FileText, Shield } from "lucide-react";
+import { Lock, EyeOff, UserCheck, FileText } from "lucide-react";
 
 export default function PoliticasPrivacidad() {
   return (

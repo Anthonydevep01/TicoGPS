@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import { Scale, AlertTriangle, CheckCircle, Phone } from "lucide-react";
+import { Scale, AlertTriangle, CheckCircle } from "lucide-react";
 
 export default function TerminosCondiciones() {
   return (
