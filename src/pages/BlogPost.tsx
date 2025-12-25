@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
-import { Link, useParams, useNavigate } from "react-router-dom";
-import { Calendar, User, Tag, Clock } from "lucide-react";
+import { Link, useParams } from "react-router-dom";
+import { Calendar, User, Clock } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useState, useEffect } from "react";
@@ -213,7 +213,9 @@ export default function BlogPost() {
                         <div className="font-bold text-slate-900 dark:text-white">
                             ¿Te gustó este artículo?
                         </div>
-                        <ShareButton variant="button" title={post.title} text={post.excerpt} />
+                        <ShareButton 
+                            text={`Mira este artículo: ${post.title}`} 
+                        />
                     </div>
                 </article>
 

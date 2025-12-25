@@ -107,7 +107,7 @@ export default function ProductDetail() {
                   className="max-w-full max-h-[500px] object-contain transition-all duration-300 hover:scale-105" 
                 />
                 <div className="absolute top-4 right-4">
-                  <ShareButton url={window.location.href} title={product.name} />
+                  <ShareButton url={window.location.href} />
                 </div>
               </div>
             </div>
