@@ -55,7 +55,7 @@ export default function Header() {
           </div>
           <div className="flex gap-4 items-center">
             <a href="https://www.facebook.com/profile.php?id=61585416941658" target="_blank" rel="noopener noreferrer" className="hover:text-accent">Facebook</a>
-            <a href="#" className="hover:text-accent">Instagram</a>
+            <a href="https://www.instagram.com/ticogpscr" target="_blank" rel="noopener noreferrer" className="hover:text-accent">Instagram</a>
             <ShareButton className="hover:text-accent text-white" />
             <button 
               onClick={toggleTheme}
