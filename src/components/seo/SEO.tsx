@@ -26,6 +26,7 @@ export default function SEO({
     "@type": "LocalBusiness",
     "name": "TicoGPS",
     "image": absoluteImage,
+    "logo": "https://ticogps.com/images/TicoGPS-logo.png",
     "telephone": "+506 8953-5649",
     "email": "serviticogps@gmail.com",
     "address": {
@@ -43,7 +44,7 @@ export default function SEO({
     "url": "https://ticogps.com",
     "sameAs": [
       "https://www.facebook.com/profile.php?id=61585416941658",
-      "https://instagram.com/ticogps"
+      "https://www.instagram.com/ticogpscr"
     ],
     "openingHoursSpecification": [
       {
