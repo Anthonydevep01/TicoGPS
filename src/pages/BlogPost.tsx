@@ -118,7 +118,7 @@ export default function BlogPost() {
   return (
     <Layout
       seo={{
-        title: `${post.title} | Blog TicoGPS`,
+        title: post.title,
         description: post.excerpt,
         canonical: `https://ticogps.com/blog/${post.slug}`,
         image: absoluteImage,
