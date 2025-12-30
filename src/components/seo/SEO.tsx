@@ -75,8 +75,12 @@ export default function SEO({
       <meta property="og:title" content={siteTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={absoluteImage} />
+      <meta property="og:image:secure_url" content={absoluteImage} />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:image:alt" content={siteTitle} />
       <meta property="og:url" content={canonical} />
       <meta property="og:site_name" content={name} />
+      <meta property="og:locale" content="es_CR" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
