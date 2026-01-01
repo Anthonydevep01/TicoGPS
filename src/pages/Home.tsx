@@ -12,6 +12,10 @@ export default function Home() {
             src="/images/TicoGPS-main-banner.jpg?v=2" 
             alt="Rastreo Satelital Costa Rica" 
             className="w-full h-full object-cover opacity-40"
+            fetchPriority="high"
+            width="1920"
+            height="1080"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent"></div>
         </div>

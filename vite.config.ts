@@ -17,7 +17,8 @@ export default defineConfig({
     react({
       babel: {
         plugins: [
-          'react-dev-locator',
+          // Only include react-dev-locator in development
+          ...(process.env.NODE_ENV === 'development' ? ['react-dev-locator'] : []),
         ],
       },
     }),
