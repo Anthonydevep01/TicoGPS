@@ -73,7 +73,7 @@ export default function Contact() {
               {/* Map Embed */}
               <div className="bg-white dark:bg-slate-900 p-2 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 h-[300px] overflow-hidden transition-colors">
                 <iframe 
-                  src="https://maps.google.com/maps?q=9.8617524,-83.9172903&z=19&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d982.3787722754687!2d-83.9173914!3d9.8617812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0df9945df90fd%3A0xcbf3946366101ca0!2sTicoGPS!5e0!3m2!1sen!2scr!4v1709251200000!5m2!1sen!2scr"
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
