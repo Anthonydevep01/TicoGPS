@@ -162,5 +162,58 @@ export const products: Product[] = [
       { label: "Compatibilidad", value: "Todo tipo de vehículo 12V" },
       { label: "Instalación", value: "Oculta y segura" }
     ]
+  },
+  {
+    id: "gps-tracker-vehicular",
+    name: "Dispositivo GPS Tracker Vehicular",
+    description: "Dispositivo para el control y administracion remota de vehiculos. Hecho para: Anti-robo, Logistica industrial, administracion de vehiculos oficiales.",
+    price: "₡65,000",
+    images: ["/images/TicoGPS-GPS01.jpeg", "/images/TicoGPS-GPS01-02.jpeg"],
+    category: ["GPS"],
+    brand: "TicoGPS",
+    sku: "GPS-ADV-010",
+    stock: true,
+    specs: [
+      { label: "Funciones", value: "Posicionamiento en tiempo real, movimiento, geo cercas, sensor de exceso de velocidad, sensor de puerta, sensor de ACC" },
+      { label: "Seguridad", value: "Corte externo de corriente, aviso de bateria baja, boton de SOS, corte remoto de combustible" },
+      { label: "Red", value: "4G" },
+      { label: "Precisión", value: "5 metros" },
+      { label: "Resistencia", value: "A prueba de agua (Si)" },
+      { label: "Certificación", value: "CE, FCC" }
+    ]
+  },
+  {
+    id: "gps-basico-vehiculo",
+    name: "GPS Basico para vehiculo",
+    description: "Solución de rastreo esencial para vehículos particulares y pequeñas flotas. Monitoreo confiable y funciones de seguridad estándar.",
+    price: "₡60,000",
+    images: ["/images/TicoGPS-GPS02.jpeg", "/images/TicoGPS-GPS03.jpeg"],
+    category: ["GPS"],
+    brand: "TicoGPS",
+    sku: "GPS-BAS-011",
+    stock: true,
+    specs: [
+      { label: "Funciones", value: "Rastreo en tiempo real, Historial de rutas" },
+      { label: "Seguridad", value: "Alertas básicas de movimiento" },
+      { label: "Red", value: "2G/4G" },
+      { label: "Instalación", value: "Compacta y discreta" }
+    ]
+  },
+  {
+    id: "smart-trak-tok-gps",
+    name: "Smart Trak Tok GPS Vehicular",
+    description: "Tecnología de rastreo de última generación con integración inteligente. Ideal para usuarios exigentes que buscan máxima conectividad.",
+    price: "₡75,000",
+    images: ["/images/TicoGPS-GPS04.jpeg", "/images/TicoGPS-GPS04-02.jpeg"],
+    category: ["GPS"],
+    brand: "TicoGPS",
+    sku: "GPS-SMART-012",
+    stock: true,
+    specs: [
+      { label: "Funciones Avanzadas", value: "Telemetría avanzada, Análisis de conducción" },
+      { label: "Conectividad", value: "App Smart Trak, Notificaciones Push instantáneas" },
+      { label: "Red", value: "4G LTE Alta Velocidad" },
+      { label: "Batería", value: "Larga duración con modo ahorro" }
+    ]
   }
 ];
