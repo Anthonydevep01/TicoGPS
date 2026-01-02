@@ -175,10 +175,15 @@ export default function ProductDetail() {
               {/* Actions */}
               <div className="space-y-4 pt-4">
                 {/* Store Availability Button */}
-                <button className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 rounded-full uppercase text-sm transition-all flex items-center justify-center gap-2">
+                <a 
+                  href={`https://wa.me/50689535649?text=Hola, TicoGPS! He visto el articulo "${product.name}" y me gustaria saber si tienen existencias.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 rounded-full uppercase text-sm transition-all flex items-center justify-center gap-2"
+                >
                   <Store className="h-4 w-4" />
                   Ver Disponibilidad en Tiendas
-                </button>
+                </a>
 
                 <div className="flex gap-4">
                   {/* Quantity Selector */}
