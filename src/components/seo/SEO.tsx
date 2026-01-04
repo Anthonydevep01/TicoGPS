@@ -18,7 +18,7 @@ export default function SEO({
   image = '/images/TicoGPS-main-banner.jpg'
 }: SEOProps) {
   
-  const siteTitle = title === 'TicoGPS' ? title : `${title} | TicoGPS`;
+  const siteTitle = title === 'TicoGPS' ? title : title;
   const absoluteImage = image.startsWith('http') ? image : `https://ticogps.com${image}`;
 
   const structuredData = {
