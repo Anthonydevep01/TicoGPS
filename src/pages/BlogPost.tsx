@@ -115,8 +115,17 @@ export default function BlogPost() {
     )
   }
 
-  const absoluteImage = post.image.startsWith('http') ? post.image : `https://ticogps.com${post.image}`;
+  // Append a version parameter to bust social media cache
+  const absoluteImage = post.image.startsWith('http') 
+    ? post.image 
+    : `https://ticogps.com${post.image}?v=${new Date().getTime()}`; // Dynamic cache buster
+    
+  // Use the canonical URL for the share button, ensuring it doesn't have extra params
+  // unless we explicitly want to bust cache, but cleaner is better for sharing.
   const pageUrl = `https://ticogps.com/blog/${post.slug}`;
+
+  // Add debugging log to check what image URL is being generated
+  // console.log('OG Image:', absoluteImage);
 
   return (
     <Layout
