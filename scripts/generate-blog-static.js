@@ -117,6 +117,28 @@ fs.readdirSync(BLOG_DIR).forEach(file => {
     `<meta property="og:url" content="${postUrl}" />`
   );
 
+  const ensure = (html, pattern, tag) => pattern.test(html) ? html.replace(pattern, tag) : html.replace('</head>', `${tag}\n</head>`);
+  const desc = meta.excerpt || meta.description || '';
+  const titleTag = meta.title || '';
+  const imageUrl = meta.image && meta.image.startsWith('http') ? meta.image : (meta.image ? `${BASE_URL}${meta.image}` : '');
+  postHtml = ensure(postHtml, /<meta property="og:type" content=".*?" \/>/, `<meta property="og:type" content="article" />`);
+  postHtml = ensure(postHtml, /<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${titleTag}" />`);
+  postHtml = ensure(postHtml, /<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${desc}" />`);
+  postHtml = ensure(postHtml, /<meta property="og:image" content=".*?" \/>/, `<meta property="og:image" content="${imageUrl}" />`);
+  postHtml = ensure(postHtml, /<meta property="og:image:secure_url" content=".*?" \/>/, `<meta property="og:image:secure_url" content="${imageUrl}" />`);
+  postHtml = ensure(postHtml, /<meta property="og:image:width" content=".*?" \/>/, `<meta property="og:image:width" content="1200" />`);
+  postHtml = ensure(postHtml, /<meta property="og:image:height" content=".*?" \/>/, `<meta property="og:image:height" content="630" />`);
+  postHtml = ensure(postHtml, /<meta property="og:image:type" content=".*?" \/>/, `<meta property="og:image:type" content="image/jpeg" />`);
+  postHtml = ensure(postHtml, /<meta property="og:image:alt" content=".*?" \/>/, `<meta property="og:image:alt" content="${titleTag || 'TicoGPS'}" />`);
+  postHtml = ensure(postHtml, /<meta property="og:site_name" content=".*?" \/>/, `<meta property="og:site_name" content="TicoGPS" />`);
+  postHtml = ensure(postHtml, /<meta property="og:locale" content=".*?" \/>/, `<meta property="og:locale" content="es_CR" />`);
+  postHtml = ensure(postHtml, /<meta name="twitter:card" content=".*?" \/>/, `<meta name="twitter:card" content="summary_large_image" />`);
+  postHtml = ensure(postHtml, /<meta name="twitter:title" content=".*?" \/>/, `<meta name="twitter:title" content="${titleTag}" />`);
+  postHtml = ensure(postHtml, /<meta name="twitter:description" content=".*?" \/>/, `<meta name="twitter:description" content="${desc}" />`);
+  postHtml = ensure(postHtml, /<meta name="twitter:image" content=".*?" \/>/, `<meta name="twitter:image" content="${imageUrl}" />`);
+  postHtml = ensure(postHtml, /<meta name="description" content=".*?" \/>/, `<meta name="description" content="${desc}" />`);
+  postHtml = ensure(postHtml, /<title>.*?<\/title>/, `<title>${titleTag}</title>`);
+
   // Write the pre-rendered HTML
   fs.writeFileSync(path.join(postDir, 'index.html'), postHtml);
   console.log(`Generated static page for: ${meta.slug}`);
