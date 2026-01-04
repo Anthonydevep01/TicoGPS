@@ -121,6 +121,5 @@ fs.readdirSync(BLOG_DIR).forEach(file => {
   fs.writeFileSync(path.join(postDir, 'index.html'), postHtml);
   console.log(`Generated static page for: ${meta.slug}`);
 });
-});
 
 console.log('Blog static generation complete.');
