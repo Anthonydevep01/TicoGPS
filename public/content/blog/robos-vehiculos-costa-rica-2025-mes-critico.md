@@ -5,7 +5,7 @@ author: "TicoGPS"
 category: "Blog"
 date: "2025-12-15"
 excerpt: "Más de 4.200 robos de vehículos en Costa Rica durante 2025. Analizamos las causas, los costos reales y las mejores medidas de prevención."
-image: "/images/TicoGPS-RobosenCostaRica.jpeg"
+image: "/images/TicoGPS-RobosEnCostaRica.jpg"
 ---
 
 **Costa Rica enfrenta una tendencia preocupante en robos de vehículos, con cifras que han ido en aumento en los últimos años y un 2025 particularmente desafiante.** Para muchos propietarios, esto significa que ya no basta con estacionar y confiar en la suerte: hoy es indispensable adoptar medidas reales de seguridad y monitoreo constante.
@@ -34,7 +34,7 @@ Cuando se habla de robos, muchas personas piensan únicamente en la pérdida del
 
 En muchos casos, recuperar un vehículo robado sin sistemas de rastreo es prácticamente imposible.
 
-![Robo de vehículos en Costa Rica](/images/TicoGPS-RobosEnCostaRica2.jpeg)
+![Robo de vehículos en Costa Rica](/images/TicoGPS-RobosEnCostaRica2.jpg)
 
 ## Medidas preventivas: más allá del seguro
 
