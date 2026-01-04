@@ -117,26 +117,10 @@ fs.readdirSync(BLOG_DIR).forEach(file => {
     `<meta property="og:url" content="${postUrl}" />`
   );
 
-  // Replace paths for JS/CSS assets
-  // This is critical because the relative paths in index.html (e.g. src="/assets/...")
-  // break when served from a subdirectory like /blog/slug/index.html
-  // We need to ensure they point to the root.
-  
-  // Fix script src
-  postHtml = postHtml.replace(
-    /src="\//g,
-    'src="https://ticogps.com/'
-  );
-  
-  // Fix link href (css, favicon, etc)
-  postHtml = postHtml.replace(
-    /href="\//g,
-    'href="https://ticogps.com/'
-  );
-
   // Write the pre-rendered HTML
   fs.writeFileSync(path.join(postDir, 'index.html'), postHtml);
   console.log(`Generated static page for: ${meta.slug}`);
+});
 });
 
 console.log('Blog static generation complete.');
