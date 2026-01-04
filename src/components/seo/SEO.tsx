@@ -74,6 +74,14 @@ export default function SEO({
       <meta property="og:type" content={type} />
       <meta property="og:title" content={siteTitle} />
       <meta property="og:description" content={description} />
+      
+      {/* 
+        WhatsApp/Facebook image fix:
+        1. Use full absolute URL
+        2. Ensure width/height are set
+        3. Ensure mimetype is set
+        4. Sometimes adding a timestamp query param helps bust cache on social crawlers if image changed
+      */}
       <meta property="og:image" content={absoluteImage} />
       <meta property="og:image:secure_url" content={absoluteImage} />
       <meta property="og:image:width" content="1200" />
