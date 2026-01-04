@@ -30,7 +30,8 @@ const parseFrontmatter = (text: string) => {
 // In a real app, this list would be generated dynamically or fetched from an API/JSON index
 const BLOG_POSTS_LIST = [
   'ticogps-experto-seguridad.md',
-  'calidad-garantia.md'
+  'calidad-garantia.md',
+  'robos-vehiculos-costa-rica-2025-mes-critico.md'
 ];
 
 interface BlogPost {

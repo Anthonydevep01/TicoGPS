@@ -59,6 +59,8 @@ export default function BlogPost() {
             fileName = 'calidad-garantia.md';
         } else if (slug === 'ticogps-experto-seguridad-vehicular-costa-rica') {
             fileName = 'ticogps-experto-seguridad.md';
+        } else if (slug === 'robos-vehiculos-costa-rica-2025-mes-critico') {
+            fileName = 'robos-vehiculos-costa-rica-2025-mes-critico.md';
         } else {
             // Try to guess filename from slug or 404
              console.warn("Post mapping not found, trying slug directly");
@@ -114,13 +116,14 @@ export default function BlogPost() {
   }
 
   const absoluteImage = post.image.startsWith('http') ? post.image : `https://ticogps.com${post.image}`;
+  const pageUrl = `https://ticogps.com/blog/${post.slug}`;
 
   return (
     <Layout
       seo={{
         title: post.title,
         description: post.excerpt,
-        canonical: `https://ticogps.com/blog/${post.slug}`,
+        canonical: pageUrl,
         image: absoluteImage,
         type: "article"
       }}
@@ -216,7 +219,8 @@ export default function BlogPost() {
                             ¿Te gustó este artículo?
                         </div>
                         <ShareButton 
-                            text={`Mira este artículo: ${post.title}`} 
+                            text={post.title}
+                            url={pageUrl}
                         />
                     </div>
                 </article>
