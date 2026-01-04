@@ -12,21 +12,21 @@ interface SEOProps {
 export default function SEO({
   title = 'TicoGPS | Rastreo Satelital y GPS en Costa Rica',
   description = 'Expertos en seguridad y control vehicular en Costa Rica. Venta e instalación de GPS para autos, camiones y flotas. Monitoreo 24/7 y cobertura nacional.',
-  canonical = 'https://ticogps.com',
+  canonical = 'https://www.ticogps.com',
   type = 'website',
   name = 'TicoGPS',
   image = '/images/TicoGPS-main-banner.jpg'
 }: SEOProps) {
   
   const siteTitle = title === 'TicoGPS' ? title : title;
-  const absoluteImage = image.startsWith('http') ? image : `https://ticogps.com${image}`;
+  const absoluteImage = image.startsWith('http') ? image : `https://www.ticogps.com${image}`;
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "TicoGPS",
     "image": absoluteImage,
-    "logo": "https://ticogps.com/images/TicoGPS-logo.png",
+    "logo": "https://www.ticogps.com/images/TicoGPS-logo.png",
     "telephone": "+506 8953-5649",
     "email": "serviticogps@gmail.com",
     "address": {
@@ -41,7 +41,7 @@ export default function SEO({
       "latitude": "9.8644", // Placeholder coords for Cartago Tribunals area
       "longitude": "-83.9194"
     },
-    "url": "https://ticogps.com",
+    "url": "https://www.ticogps.com",
     "sameAs": [
       "https://www.facebook.com/profile.php?id=61585416941658",
       "https://www.instagram.com/ticogpscr"
