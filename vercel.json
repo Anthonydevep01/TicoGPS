@@ -1,9 +1,13 @@
 {
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/blog/(.*)",
-      "destination": "/blog/$1/index.html"
-    },
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "ticogps.com" }],
+      "destination": "https://www.ticogps.com/:1",
+      "statusCode": 308
+    }
+  ],
+  "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/index.html"
