@@ -8,7 +8,7 @@ export default function FlotasCorporativas() {
       seo={{
         title: "Control de Flotas Corporativas | TicoGPS",
         description: "Optimiza la logística de tu empresa. Control de combustible, rutas, tiempos de entrega y hábitos de conducción.",
-        canonical: "https://ticogps.com/servicios/flotas-corporativas"
+        canonical: "https://www.ticogps.com/servicios/flotas-corporativas"
       }}
     >
       <div className="bg-slate-50 dark:bg-slate-950 min-h-screen transition-colors duration-300">

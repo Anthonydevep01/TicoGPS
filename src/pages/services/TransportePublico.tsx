@@ -8,7 +8,7 @@ export default function TransportePublico() {
       seo={{
         title: "Transporte Público | TicoGPS",
         description: "Soluciones de transporte público para taxis y autobuses. App tipo Uber/Didi y rastreo en tiempo real para usuarios.",
-        canonical: "https://ticogps.com/servicios/transporte-publico"
+        canonical: "https://www.ticogps.com/servicios/transporte-publico"
       }}
     >
       {/* Hero Section */}

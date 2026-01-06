@@ -8,7 +8,7 @@ export default function AppTaxis() {
       seo={{
         title: "App para Taxis | TicoGPS",
         description: "Aplicación de transporte tipo Uber/Didi exclusiva para taxis en Costa Rica. Tarifas competitivas y soporte 24/7.",
-        canonical: "https://ticogps.com/servicios/transporte-publico/app-taxis"
+        canonical: "https://www.ticogps.com/servicios/transporte-publico/app-taxis"
       }}
     >
       {/* Hero */}

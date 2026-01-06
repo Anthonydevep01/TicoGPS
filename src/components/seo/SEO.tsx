@@ -97,6 +97,8 @@ export default function SEO({
       <meta name="twitter:title" content={siteTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={absoluteImage} />
+      <link rel="alternate" hrefLang="es-cr" href={canonical} />
+      <link rel="alternate" hrefLang="x-default" href={canonical} />
 
       {/* Schema.org Structured Data */}
       <script type="application/ld+json">

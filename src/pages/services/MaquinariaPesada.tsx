@@ -8,7 +8,7 @@ export default function MaquinariaPesada() {
       seo={{
         title: "GPS para Maquinaria Pesada | TicoGPS",
         description: "Monitoreo de horas motor, ubicación y seguridad para maquinaria amarilla y equipo pesado en Costa Rica.",
-        canonical: "https://ticogps.com/servicios/maquinaria-pesada"
+        canonical: "https://www.ticogps.com/servicios/maquinaria-pesada"
       }}
     >
       <div className="bg-slate-50 dark:bg-slate-950 min-h-screen transition-colors duration-300">

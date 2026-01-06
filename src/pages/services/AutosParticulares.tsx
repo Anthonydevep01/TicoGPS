@@ -8,7 +8,7 @@ export default function AutosParticulares() {
       seo={{
         title: "GPS para Autos Particulares | TicoGPS",
         description: "Protege tu vehículo personal con la mejor tecnología GPS de Costa Rica. Apagado remoto, alertas de movimiento y monitoreo 24/7.",
-        canonical: "https://ticogps.com/servicios/autos-particulares"
+        canonical: "https://www.ticogps.com/servicios/autos-particulares"
       }}
     >
       <div className="bg-slate-50 dark:bg-slate-950 min-h-screen transition-colors duration-300">

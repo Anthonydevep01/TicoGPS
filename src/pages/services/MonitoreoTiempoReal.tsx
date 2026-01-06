@@ -8,7 +8,7 @@ export default function MonitoreoTiempoReal() {
       seo={{
         title: "Monitoreo GPS en Tiempo Real | TicoGPS",
         description: "Plataforma de rastreo satelital en vivo. Acceso desde App (Android/iOS) y Web. Ubicación precisa cada 10 segundos.",
-        canonical: "https://ticogps.com/servicios/monitoreo-tiempo-real"
+        canonical: "https://www.ticogps.com/servicios/monitoreo-tiempo-real"
       }}
     >
       <div className="bg-slate-50 dark:bg-slate-950 min-h-screen transition-colors duration-300">

@@ -8,7 +8,7 @@ export default function Autobuses() {
       seo={{
         title: "Gestión de Autobuses | TicoGPS",
         description: "Sistema de rastreo GPS para autobuses en Costa Rica. Ubicación en tiempo real para usuarios y control de flota para empresas.",
-        canonical: "https://ticogps.com/servicios/transporte-publico/autobuses"
+        canonical: "https://www.ticogps.com/servicios/transporte-publico/autobuses"
       }}
     >
       {/* Hero */}

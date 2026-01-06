@@ -8,7 +8,7 @@ export default function InstalacionDomicilio() {
       seo={{
         title: "Instalación de GPS a Domicilio | TicoGPS",
         description: "Vamos donde estés. Instalación profesional de GPS a domicilio en todo Costa Rica. Técnicos certificados y garantía.",
-        canonical: "https://ticogps.com/servicios/instalacion-domicilio"
+        canonical: "https://www.ticogps.com/servicios/instalacion-domicilio"
       }}
     >
       <div className="bg-slate-50 dark:bg-slate-950 min-h-screen transition-colors duration-300">
