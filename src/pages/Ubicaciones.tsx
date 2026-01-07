@@ -9,7 +9,7 @@ export default function Ubicaciones() {
       seo={{
         title: "Cobertura Nacional de GPS | TicoGPS",
         description: "Brindamos servicios de rastreo GPS y monitoreo satelital en las 7 provincias de Costa Rica: San José, Alajuela, Cartago, Heredia, Guanacaste, Puntarenas y Limón.",
-        canonical: "https://ticogps.com/ubicaciones"
+        canonical: "https://www.ticogps.com/ubicaciones"
       }}
     >
       <div className="bg-slate-50 dark:bg-slate-950 min-h-screen py-16">

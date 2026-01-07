@@ -25,7 +25,7 @@ export default function Products() {
       seo={{
         title: "Productos GPS y Taxímetros | TicoGPS",
         description: "Catálogo de taxímetros, dispositivos GPS 4G, impresoras y accesorios para transporte en Costa Rica.",
-        canonical: "https://ticogps.com/productos"
+        canonical: "https://www.ticogps.com/productos"
       }}
     >
       <div className="bg-slate-50 dark:bg-slate-950 min-h-screen py-12">

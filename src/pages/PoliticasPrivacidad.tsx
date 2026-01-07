@@ -7,7 +7,7 @@ export default function PoliticasPrivacidad() {
       seo={{
         title: "Política de Privacidad | TicoGPS",
         description: "Compromiso de confidencialidad, manejo de datos y privacidad de TicoGPS Costa Rica.",
-        canonical: "https://ticogps.com/politica-privacidad"
+        canonical: "https://www.ticogps.com/politica-privacidad"
       }}
     >
       {/* Header */}

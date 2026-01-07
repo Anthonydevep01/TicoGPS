@@ -8,7 +8,7 @@ export default function Contact() {
       seo={{
         title: "Contacto",
         description: "Contáctanos para cotizar tu GPS o sistema de rastreo satelital. Ubicados en Cartago, servicio a todo Costa Rica.",
-        canonical: "https://ticogps.com/contacto"
+        canonical: "https://www.ticogps.com/contacto"
       }}
     >
       <div className="bg-slate-50 dark:bg-slate-950 py-12 md:py-20 transition-colors duration-300">

@@ -91,7 +91,7 @@ export default function Services() {
       seo={{
         title: "Nuestros Servicios | TicoGPS",
         description: "Soluciones de rastreo satelital para autos, flotas, maquinaria y más. Tecnología avanzada y soporte local.",
-        canonical: "https://ticogps.com/servicios"
+        canonical: "https://www.ticogps.com/servicios"
       }}
     >
       <div className="bg-slate-50 dark:bg-slate-950 min-h-screen transition-colors duration-300">

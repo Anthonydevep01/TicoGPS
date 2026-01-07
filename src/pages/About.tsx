@@ -8,7 +8,7 @@ export default function About() {
       seo={{
         title: "Nosotros | TicoGPS - Expertos en Rastreo Satelital",
         description: "Conoce a TicoGPS, empresa líder en seguridad vehicular en Costa Rica. Más de 10 años brindando tranquilidad a familias y empresas.",
-        canonical: "https://ticogps.com/nosotros"
+        canonical: "https://www.ticogps.com/nosotros"
       }}
     >
       <div className="bg-almond_cream dark:bg-ebony-100 min-h-screen transition-colors duration-300">

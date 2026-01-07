@@ -7,7 +7,7 @@ export default function TerminosCondiciones() {
       seo={{
         title: "Términos y Condiciones | TicoGPS",
         description: "Términos de servicio, políticas de garantía, instalación y privacidad de TicoGPS Costa Rica.",
-        canonical: "https://ticogps.com/terminos-condiciones"
+        canonical: "https://www.ticogps.com/terminos-condiciones"
       }}
     >
       {/* Header */}
