@@ -8,6 +8,8 @@ excerpt: "Descubre por qué elegir un proveedor con trayectoria y soporte 24/7 e
 category: "Seguridad y Confianza"
 ---
 
+![Seguridad y garantía GPS](/images/Blog-Seguridad-Garantia.jpg)
+
 Cuando pensamos en instalar un [GPS en nuestro vehículo](/servicios/monitoreo-tiempo-real), ya sea el auto familiar, un taxi o una flotilla de camiones, la primera pregunta que suele venir a la mente es: *"¿Qué pasa si el dispositivo falla?"* o *"¿Quién me ayuda si tengo una emergencia en la madrugada?"*.
 
 En el mercado actual, abundan los dispositivos electrónicos "desechables". Sin embargo, en [**TicoGPS**](/) entendemos que cuando usted invierte en seguridad, no está comprando solo un aparato de plástico y circuitos; usted está contratando tranquilidad.

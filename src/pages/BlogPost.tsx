@@ -62,9 +62,7 @@ export default function BlogPost() {
         } else if (slug === 'robos-vehiculos-costa-rica-2025-mes-critico') {
             fileName = 'robos-vehiculos-costa-rica-2025-mes-critico.md';
         } else {
-            // Try to guess filename from slug or 404
-             console.warn("Post mapping not found, trying slug directly");
-             fileName = `${slug}.md`;
+            fileName = `${slug}.md`;
         }
 
         const response = await fetch(`/content/blog/${fileName}`);
@@ -79,7 +77,7 @@ export default function BlogPost() {
           date: data.date || '',
           author: data.author || '',
           image: data.image || '',
-          excerpt: data.excerpt || '',
+          excerpt: data.excerpt || data.meta_description || '',
           category: data.category || '',
           content: content
         });
@@ -124,8 +122,6 @@ export default function BlogPost() {
   // unless we explicitly want to bust cache, but cleaner is better for sharing.
   const pageUrl = `https://www.ticogps.com/blog/${post.slug}`;
 
-  // Add debugging log to check what image URL is being generated
-  // console.log('OG Image:', absoluteImage);
 
   return (
     <Layout
@@ -169,19 +165,25 @@ export default function BlogPost() {
                     <div className="sticky top-24 space-y-6">
                          <div className="bg-white dark:bg-slate-900 p-4 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800 text-center">
                             <p className="text-xs text-slate-400 mb-2">PUBLICIDAD</p>
-                            <div className="bg-slate-100 dark:bg-slate-800 h-64 w-full flex items-center justify-center text-slate-300 text-xs">
-                                Banner Vertical
-                            </div>
+                         <a
+                            href="https://linkcraftmedia.com"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="Publicidad LinkCraft Media"
+                          >
+                            <img
+                              src="/images/TicoGPS-SideBanner01.jpg"
+                              alt="Publicidad LinkCraft Media"
+                              className="w-full h-64 object-cover rounded-md border border-slate-200 dark:border-slate-700"
+                            />
+                          </a>
                          </div>
                     </div>
                 </aside>
 
                 {/* Middle Column: Content */}
                 <article className="lg:col-span-7 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 p-8 md:p-12">
-                    {/* Featured Image inside content */}
-                    <div className="mb-10 -mx-8 md:-mx-12 -mt-8 md:-mt-12 rounded-t-2xl overflow-hidden">
-                        <img src={post.image} alt={post.title} className="w-full h-auto" />
-                    </div>
+                    {/* Featured image inside content removed to avoid duplication */}
 
                     <div className="prose prose-lg dark:prose-invert max-w-none 
                         prose-headings:font-bold prose-headings:text-slate-900 dark:prose-headings:text-white

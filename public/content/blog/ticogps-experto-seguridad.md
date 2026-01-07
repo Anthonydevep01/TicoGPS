@@ -8,6 +8,8 @@ excerpt: "Descubre TicoGPS, la solución líder en rastreo satelital en Costa Ri
 category: "Tecnología y Seguridad"
 ---
 
+![Rastreo satelital en Costa Rica](/images/Blog-Rastreo-Satelital.jpg)
+
 ## Más que un dispositivo, tu tranquilidad
 
 En un mundo donde la seguridad es prioridad, saber dónde está tu vehículo o tu flotilla no es un lujo, es una necesidad. En [**TicoGPS**](/) entendemos que detrás de cada volante hay una inversión, una herramienta de trabajo o, lo más importante, una familia.

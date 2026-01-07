@@ -31,7 +31,8 @@ const parseFrontmatter = (text: string) => {
 const BLOG_POSTS_LIST = [
   'ticogps-experto-seguridad.md',
   'calidad-garantia.md',
-  'robos-vehiculos-costa-rica-2025-mes-critico.md'
+  'robos-vehiculos-costa-rica-2025-mes-critico.md',
+  'multas-transito-costa-rica-2026-rebajas.md'
 ];
 
 interface BlogPost {
@@ -67,7 +68,7 @@ export default function Blog() {
               date: data.date || '',
               author: data.author || '',
               image: data.image || '',
-              excerpt: data.excerpt || '',
+              excerpt: data.excerpt || data.meta_description || content.slice(0, 160),
               category: data.category || '',
               content: content
             });
@@ -93,7 +94,7 @@ export default function Blog() {
       seo={{
         title: "Blog TicoGPS | Noticias y Consejos de Seguridad",
         description: "Artículos sobre rastreo GPS, seguridad vehicular, mantenimiento de flotas y tecnología en Costa Rica.",
-        canonical: "https://ticogps.com/blog"
+        canonical: "https://www.ticogps.com/blog"
       }}
     >
       {/* Header */}

@@ -82,7 +82,17 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-coffee_bean-200 mt-12 pt-8 text-center text-sm text-almond_cream-600">
-          <p>&copy; {new Date().getFullYear()} TicoGPS. Todos los derechos reservados.</p>
+          <p>
+            &copy; {new Date().getFullYear()} TicoGPS. Todos los derechos reservados.{" "}
+            <a
+              href="https://linkcraftmedia.com"
+              target="_blank"
+              rel="noopener"
+              className="hover:text-white hover:underline"
+            >
+              Gestionado por Linkcraftmedia.com
+            </a>
+          </p>
         </div>
       </div>
     </footer>

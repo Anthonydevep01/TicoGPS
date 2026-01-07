@@ -8,6 +8,8 @@ excerpt: "Más de 4.200 robos de vehículos en Costa Rica durante 2025. Analizam
 image: "/images/TicoGPS-RobosEnCostaRica.jpg"
 ---
 
+![Robos de vehículos en Costa Rica 2025](/images/TicoGPS-RobosEnCostaRica.jpg)
+
 **Costa Rica enfrenta una tendencia preocupante en robos de vehículos, con cifras que han ido en aumento en los últimos años y un 2025 particularmente desafiante.** Para muchos propietarios, esto significa que ya no basta con estacionar y confiar en la suerte: hoy es indispensable adoptar medidas reales de seguridad y monitoreo constante.
 
 ## ¿Por qué están aumentando los robos de vehículos?
