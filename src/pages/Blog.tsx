@@ -49,6 +49,7 @@ interface BlogPost {
 export default function Blog() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
+  const [active, setActive] = useState(0);
 
   useEffect(() => {
     const loadPosts = async () => {
@@ -88,6 +89,15 @@ export default function Blog() {
 
     loadPosts();
   }, []);
+  
+  const recentPosts = posts.slice(0, 4);
+  useEffect(() => {
+    if (recentPosts.length === 0) return;
+    const t = setInterval(() => {
+      setActive(a => (a + 1) % recentPosts.length);
+    }, 5000);
+    return () => clearInterval(t);
+  }, [recentPosts.length]);
 
   return (
     <Layout
@@ -106,6 +116,64 @@ export default function Blog() {
           </p>
         </div>
       </section>
+      
+      {/* Trending Carousel */}
+      {recentPosts.length > 0 && (
+        <section className="py-10 bg-slate-50 dark:bg-slate-950">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tracking-wide mb-3">Artículos recientes</h2>
+            <hr className="border-t-2 border-primary w-full mb-6" />
+            <div className="mx-auto max-w-4xl"><div className="relative overflow-hidden rounded-2xl">
+              <div
+                className="flex transition-transform duration-700"
+                style={{ transform: `translateX(-${active * 100}%)` }}
+              >
+                {recentPosts.map((post) => (
+                  <Link
+                    key={post.slug}
+                    to={`/blog/${post.slug}`}
+                    className="relative min-w-full flex-shrink-0 h-[260px] md:h-[340px] rounded-2xl"
+                  >
+                    <div className="absolute inset-0">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                        width={1280}
+                        height={720}
+                        sizes="(max-width: 768px) 100vw, 1200px"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+                    </div>
+                    <div className="relative z-10 h-full flex items-end p-6">
+                      <div className="text-white max-w-xl">
+                        <h3 className="text-2xl md:text-3xl font-bold mb-2">{post.title}</h3>
+                        <p className="text-sm md:text-base text-white/90 line-clamp-3">{post.excerpt}</p>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+              <button
+                aria-label="Anterior"
+                onClick={() => setActive(a => (a - 1 + recentPosts.length) % recentPosts.length)}
+                className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 dark:bg-slate-800 text-slate-900 dark:text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center shadow hover:bg-white dark:hover:bg-slate-700"
+              >
+                ‹
+              </button>
+              <button
+                aria-label="Siguiente"
+                onClick={() => setActive(a => (a + 1) % recentPosts.length)}
+                className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 dark:bg-slate-800 text-slate-900 dark:text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center shadow hover:bg-white dark:hover:bg-slate-700"
+              >
+                ›
+              </button>
+            </div></div>
+          </div>
+        </section>
+      )}
 
       {/* Main Grid */}
       <section className="py-16 bg-slate-50 dark:bg-slate-950">

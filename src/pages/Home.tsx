@@ -174,9 +174,14 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2">
               <img 
-                src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Técnico instalando GPS" 
+                src="/images/TicoGPS-PorqueTicoGPS.jpg" 
+                alt="Por qué elegir TicoGPS: instalación profesional de GPS" 
+                title="Por qué elegir TicoGPS"
                 className="rounded-xl shadow-xl"
+                width="800"
+                height="600"
+                decoding="async"
+                loading="lazy"
               />
             </div>
             <div className="lg:w-1/2">
