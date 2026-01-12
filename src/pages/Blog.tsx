@@ -126,13 +126,17 @@ export default function Blog() {
             <div className="mx-auto max-w-4xl"><div className="relative overflow-hidden rounded-2xl">
               <div
                 className="flex transition-transform duration-700"
-                style={{ transform: `translateX(-${active * 100}%)` }}
+                style={{ 
+                  transform: `translateX(-${recentPosts.length > 0 ? (active * 100) / recentPosts.length : 0}%)`,
+                  width: `${recentPosts.length * 100}%`
+                }}
               >
                 {recentPosts.map((post) => (
                   <Link
                     key={post.slug}
                     to={`/blog/${post.slug}`}
-                    className="relative min-w-full flex-shrink-0 h-[260px] md:h-[340px] rounded-2xl"
+                    className="relative flex-shrink-0 h-[260px] md:h-[340px] rounded-2xl"
+                    style={{ width: `${100 / recentPosts.length}%` }}
                   >
                     <div className="absolute inset-0">
                       <img
