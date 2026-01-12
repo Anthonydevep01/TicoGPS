@@ -73,7 +73,15 @@ export default function Header() {
         <div className="flex justify-between items-center h-20 sm:h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src="/images/TicoGPS-large-logo.png" alt="TicoGPS" className="h-20 w-auto object-contain" />
+            <img 
+              src="/images/TicoGPS-large-logo.png" 
+              alt="TicoGPS" 
+              className="h-20 w-auto object-contain" 
+              width={356} 
+              height={196}
+              decoding="async"
+              loading="eager"
+            />
           </Link>
 
           {/* Desktop Nav */}

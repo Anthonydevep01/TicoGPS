@@ -10,7 +10,15 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <img src="/images/TicoGPS-large-logo.png" alt="TicoGPS" className="h-32 w-auto bg-white rounded-md p-2 object-contain" />
+              <img 
+                src="/images/TicoGPS-large-logo.png" 
+                alt="TicoGPS" 
+                className="h-32 w-auto bg-white rounded-md p-2 object-contain" 
+                width={356} 
+                height={196}
+                decoding="async"
+                loading="lazy"
+              />
             </Link>
             <p className="text-sm leading-relaxed mb-4 text-almond_cream-600">
               Expertos en seguridad y control vehicular en Costa Rica con más de 10 años de experiencia.
