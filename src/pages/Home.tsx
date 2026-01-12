@@ -9,7 +9,7 @@ export default function Home() {
       <section className="relative bg-slate-900 text-white py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/TicoGPS-main-banner.jpg?v=2" 
+            src="/images/TicoGPS-main-banner.webp" 
             alt="Rastreo Satelital Costa Rica" 
             className="w-full h-full object-cover opacity-40"
             fetchPriority="high"
@@ -174,7 +174,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2">
               <img 
-                src="/images/TicoGPS-PorqueTicoGPS.jpg" 
+                src="/images/TicoGPS-PorqueTicoGPS.webp" 
                 alt="Por qué elegir TicoGPS: instalación profesional de GPS" 
                 title="Por qué elegir TicoGPS"
                 className="rounded-xl shadow-xl"

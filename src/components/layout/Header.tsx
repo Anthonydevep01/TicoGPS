@@ -74,7 +74,7 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <img 
-              src="/images/TicoGPS-large-logo.png" 
+              src="/images/TicoGPS-large-logo.webp" 
               alt="TicoGPS" 
               className="h-20 w-auto object-contain" 
               width={356} 

@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
               <img 
-                src="/images/TicoGPS-large-logo.png" 
+                src="/images/TicoGPS-large-logo.webp" 
                 alt="TicoGPS" 
                 className="h-32 w-auto bg-white rounded-md p-2 object-contain" 
                 width={356} 
