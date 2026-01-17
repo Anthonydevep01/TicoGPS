@@ -5,6 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import SEO from '../seo/SEO';
 import ShareButton from '../common/ShareButton';
+import { Helmet } from 'react-helmet-async';
 
 interface LayoutProps {
   children: ReactNode;
@@ -37,9 +38,40 @@ export default function Layout({ children, seo }: LayoutProps) {
     }
   };
 
+  const host = 'https://www.ticogps.com';
+  const segmentNames: Record<string, string> = {
+    servicios: 'Servicios',
+    productos: 'Productos',
+    ubicaciones: 'Ubicaciones',
+    nosotros: 'Nosotros',
+    blog: 'Blog',
+    contacto: 'Contacto',
+    'terminos-condiciones': 'Términos y Condiciones',
+    'politica-privacidad': 'Política de Privacidad'
+  };
+  const toTitle = (s: string) => (segmentNames[s] ?? s.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()));
+  const breadcrumbItems = [{ '@type': 'ListItem', position: 1, name: 'Inicio', item: `${host}/` }];
+  pathSegments.forEach((seg, idx) => {
+    const url = `${host}/${pathSegments.slice(0, idx + 1).join('/')}`;
+    breadcrumbItems.push({
+      '@type': 'ListItem',
+      position: idx + 2,
+      name: toTitle(seg),
+      item: url
+    });
+  });
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbItems
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       <SEO {...seo} />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
+      </Helmet>
       <Header />
       {showBackButton && (
         <button

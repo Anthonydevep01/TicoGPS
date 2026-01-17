@@ -5,6 +5,7 @@ import { products, Product } from "@/data/products";
 import { Check, ChevronRight, ShoppingCart, Store, Minus, Plus, ChevronLeft } from "lucide-react";
 import ShareButton from "@/components/common/ShareButton";
 import { useCart } from "@/context/CartContext";
+import { Helmet } from "react-helmet-async";
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -59,10 +60,30 @@ export default function ProductDetail() {
       seo={{
         title: `${product.name} | TicoGPS`,
         description: product.description,
-        canonical: `https://ticogps.com/productos/${product.id}`,
+        canonical: `https://www.ticogps.com/productos/${product.id}`,
         image: product.images[0]
       }}
     >
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": product.name,
+            "description": product.description,
+            "image": product.images.map(img => `https://www.ticogps.com${img}`),
+            "brand": product.brand ? { "@type": "Brand", "name": product.brand } : undefined,
+            "sku": product.sku,
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "CRC",
+              "price": Number((product.price || "").replace(/[^\d]/g, "")) || undefined,
+              "availability": product.stock === false ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
+              "url": `https://www.ticogps.com/productos/${product.id}`
+            }
+          })}
+        </script>
+      </Helmet>
       <div className="bg-white dark:bg-slate-950 min-h-screen pb-16">
         {/* Breadcrumb */}
         <div className="bg-slate-100 dark:bg-slate-900 py-3 border-b border-slate-200 dark:border-slate-800">

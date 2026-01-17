@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useState, useEffect } from "react";
 import ShareButton from "@/components/common/ShareButton";
+import { Helmet } from "react-helmet-async";
 
 // Simple custom frontmatter parser to avoid gray-matter browser issues
 const parseFrontmatter = (text: string) => {
@@ -122,7 +123,6 @@ export default function BlogPost() {
   // unless we explicitly want to bust cache, but cleaner is better for sharing.
   const pageUrl = `https://www.ticogps.com/blog/${post.slug}`;
 
-
   return (
     <Layout
       seo={{
@@ -133,6 +133,34 @@ export default function BlogPost() {
         type: "article"
       }}
     >
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": pageUrl
+            },
+            "headline": post.title,
+            "image": absoluteImage.replace(/\?v=\d+$/, ""),
+            "author": {
+              "@type": "Organization",
+              "name": post.author || "TicoGPS"
+            },
+            "datePublished": post.date,
+            "dateModified": post.date,
+            "publisher": {
+              "@type": "Organization",
+              "name": "TicoGPS",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.ticogps.com/images/TicoGPS-logo.webp"
+              }
+            }
+          })}
+        </script>
+      </Helmet>
       {/* Hero Header */}
       <div className="bg-slate-900 text-white relative">
         <div className="absolute inset-0 overflow-hidden">

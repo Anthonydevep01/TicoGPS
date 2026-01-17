@@ -12,10 +12,10 @@ interface SEOProps {
 export default function SEO({
   title = 'TicoGPS | Rastreo Satelital y GPS en Costa Rica',
   description = 'Expertos en seguridad y control vehicular en Costa Rica. Venta e instalación de GPS para autos, camiones y flotas. Monitoreo 24/7 y cobertura nacional.',
-  canonical = 'https://www.ticogps.com',
+  canonical = 'https://www.ticogps.com/',
   type = 'website',
   name = 'TicoGPS',
-  image = '/images/TicoGPS-main-banner.jpg'
+  image = '/images/TicoGPS-main-banner.webp'
 }: SEOProps) {
   
   const siteTitle = title === 'TicoGPS' ? title : title;
@@ -86,7 +86,7 @@ export default function SEO({
       <meta property="og:image:secure_url" content={absoluteImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:image:type" content="image/webp" />
       <meta property="og:image:alt" content={siteTitle} />
       <meta property="og:url" content={canonical} />
       <meta property="og:site_name" content={name} />
