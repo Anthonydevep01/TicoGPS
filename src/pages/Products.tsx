@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { products } from "@/data/products";
 import { useCart } from "@/context/CartContext";
+import { Helmet } from "react-helmet-async";
 
 export default function Products() {
   const [selectedCategory, setSelectedCategory] = useState<string>("Todos");
@@ -28,6 +29,19 @@ export default function Products() {
         canonical: "https://www.ticogps.com/productos"
       }}
     >
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": products.map((p, i) => ({
+              "@type": "ListItem",
+              "position": i + 1,
+              "url": `https://www.ticogps.com/productos/${p.id}`
+            }))
+          })}
+        </script>
+      </Helmet>
       <div className="bg-slate-50 dark:bg-slate-950 min-h-screen py-12">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">

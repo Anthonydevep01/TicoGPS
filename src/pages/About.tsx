@@ -1,6 +1,7 @@
 import Layout from '@/components/layout/Layout';
 import { Link } from 'react-router-dom';
 import { Target, Heart, Shield, Users, Award, MapPin } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 export default function About() {
   return (
@@ -11,6 +12,21 @@ export default function About() {
         canonical: "https://www.ticogps.com/nosotros"
       }}
     >
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "Nosotros",
+            "url": "https://www.ticogps.com/nosotros",
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "TicoGPS",
+              "url": "https://www.ticogps.com/"
+            }
+          })}
+        </script>
+      </Helmet>
       <div className="bg-almond_cream dark:bg-ebony-100 min-h-screen transition-colors duration-300">
         
         {/* Hero Section */}

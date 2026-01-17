@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Lock, EyeOff, UserCheck, FileText } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function PoliticasPrivacidad() {
   return (
@@ -10,6 +11,16 @@ export default function PoliticasPrivacidad() {
         canonical: "https://www.ticogps.com/politica-privacidad"
       }}
     >
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "PrivacyPolicy",
+            "name": "Política de Privacidad",
+            "url": "https://www.ticogps.com/politica-privacidad"
+          })}
+        </script>
+      </Helmet>
       {/* Header */}
       <section className="bg-slate-900 py-16 text-white">
         <div className="container mx-auto px-4 text-center">

@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Scale, AlertTriangle, CheckCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function TerminosCondiciones() {
   return (
@@ -10,6 +11,16 @@ export default function TerminosCondiciones() {
         canonical: "https://www.ticogps.com/terminos-condiciones"
       }}
     >
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TermsOfService",
+            "name": "Términos y Condiciones",
+            "url": "https://www.ticogps.com/terminos-condiciones"
+          })}
+        </script>
+      </Helmet>
       {/* Header */}
       <section className="bg-slate-900 py-16 text-white">
         <div className="container mx-auto px-4 text-center">

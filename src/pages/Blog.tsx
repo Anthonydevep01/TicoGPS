@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, User, Clock } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 // Simple custom frontmatter parser to avoid gray-matter browser issues
 const parseFrontmatter = (text: string) => {
@@ -107,6 +108,21 @@ export default function Blog() {
         canonical: "https://www.ticogps.com/blog"
       }}
     >
+      {!loading && posts.length > 0 && (
+        <Helmet>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              "itemListElement": posts.map((p, i) => ({
+                "@type": "ListItem",
+                "position": i + 1,
+                "url": `https://www.ticogps.com/blog/${p.slug}`
+              }))
+            })}
+          </script>
+        </Helmet>
+      )}
       {/* Header */}
       <section className="bg-slate-900 py-16">
         <div className="container mx-auto px-4 text-center">

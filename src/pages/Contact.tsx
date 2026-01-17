@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import ContactForm from "@/components/sections/ContactForm";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function Contact() {
   return (
@@ -11,6 +12,21 @@ export default function Contact() {
         canonical: "https://www.ticogps.com/contacto"
       }}
     >
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contacto",
+            "url": "https://www.ticogps.com/contacto",
+            "about": {
+              "@type": "Organization",
+              "name": "TicoGPS",
+              "url": "https://www.ticogps.com/"
+            }
+          })}
+        </script>
+      </Helmet>
       <div className="bg-slate-50 dark:bg-slate-950 py-12 md:py-20 transition-colors duration-300">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">

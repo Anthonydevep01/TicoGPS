@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { locations } from "@/data/locations";
 import { Link } from "react-router-dom";
 import { MapPin, ChevronRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function Ubicaciones() {
   return (
@@ -12,6 +13,19 @@ export default function Ubicaciones() {
         canonical: "https://www.ticogps.com/ubicaciones"
       }}
     >
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": locations.map((prov, i) => ({
+              "@type": "ListItem",
+              "position": i + 1,
+              "url": `https://www.ticogps.com/ubicaciones/${prov.slug}`
+            }))
+          })}
+        </script>
+      </Helmet>
       <div className="bg-slate-50 dark:bg-slate-950 min-h-screen py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Quote } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const services = [
   {
@@ -94,6 +95,19 @@ export default function Services() {
         canonical: "https://www.ticogps.com/servicios"
       }}
     >
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": services.map((s, i) => ({
+              "@type": "ListItem",
+              "position": i + 1,
+              "url": `https://www.ticogps.com${s.link}`
+            }))
+          })}
+        </script>
+      </Helmet>
       <div className="bg-slate-50 dark:bg-slate-950 min-h-screen transition-colors duration-300">
         {/* Header */}
         <div className="bg-slate-900 text-white py-20">
