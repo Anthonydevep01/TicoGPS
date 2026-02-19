@@ -5,6 +5,7 @@ author: "TicoGPS"
 date: "2026-02-18"
 meta_title: "Robo de vehículos en centros comerciales Costa Rica | Seguridad 2026"
 meta_description: "¿Es seguro parquear en el mall? Conozca los protocolos ante bajnazos y balaceras en zonas comerciales de Costa Rica y cómo el GPS protege su vida."
+excerpt: "¿Es seguro parquear en el mall? Conozca los protocolos ante bajnazos y balaceras en zonas comerciales de Costa Rica y cómo el GPS protege su vida."
 primary_keyword: "Robo de vehículos en centros comerciales Costa Rica"
 secondary_keywords: [seguridad en parqueos públicos, bajnazos en centros comerciales, botón de pánico GPS, protocolos de seguridad vehicular]
 category: "Seguridad Ciudadana"
