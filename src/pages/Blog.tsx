@@ -33,7 +33,8 @@ const BLOG_POSTS_LIST = [
   'ticogps-experto-seguridad.md',
   'calidad-garantia.md',
   'robos-vehiculos-costa-rica-2025-mes-critico.md',
-  'multas-transito-costa-rica-2026-rebajas.md'
+  'multas-transito-costa-rica-2026-rebajas.md',
+  'robo-vehiculos-centros-comerciales-costa-rica-protocolos.md'
 ];
 
 interface BlogPost {
