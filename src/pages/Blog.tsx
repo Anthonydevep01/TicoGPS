@@ -34,7 +34,8 @@ const BLOG_POSTS_LIST = [
   'calidad-garantia.md',
   'robos-vehiculos-costa-rica-2025-mes-critico.md',
   'multas-transito-costa-rica-2026-rebajas.md',
-  'robo-vehiculos-centros-comerciales-costa-rica-protocolos.md'
+  'robo-vehiculos-centros-comerciales-costa-rica-protocolos.md',
+  'cocherazo-nocturno-costa-rica-seguridad.md'
 ];
 
 interface BlogPost {
