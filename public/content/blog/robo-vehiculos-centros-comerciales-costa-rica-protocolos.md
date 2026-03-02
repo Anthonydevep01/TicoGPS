@@ -86,3 +86,20 @@ Además de la tecnología, hay hábitos que reducen considerablemente el riesgo:
 La combinación de **protocolos claros**, **hábitos preventivos** y **tecnología GPS confiable** convierte al centro comercial en un lugar mucho más seguro para usted y su familia. El objetivo no es vivir con miedo, sino moverse con inteligencia y con el respaldo de un sistema que trabaja 24/7 a su favor.
 
 En TicoGPS, nuestra prioridad es que usted pueda disfrutar de sus compras, salidas al cine o visitas al supermercado con la tranquilidad de saber que, pase lo que pase, nunca estará solo ni desprotegido.
+
+## Preguntas frecuentes (FAQ)
+
+### ¿El centro comercial responde si me roban el auto?
+Los comercios con parqueo tienen deber de vigilancia y custodia. Revise términos del tiquete y reporte el incidente; contar con evidencia (rastreo, hora, ubicación) facilita reclamos.
+
+### ¿Qué hago si quedo atrapado en una balacera?
+**Al suelo, sin correr.** Protéjase detrás de la llanta delantera (motor como blindaje), mantenga silencio y evite intentar llegar al vehículo mientras haya riesgo activo.
+
+### ¿Cómo me ayuda el botón de pánico del GPS?
+Permite alertas silenciosas y ubicación en tiempo real para activar protocolos y coordinar con seguridad/autoridades antes de que los delincuentes escapen.
+
+### ¿Es legal el apagado remoto del motor?
+Sí. El corte de motor está diseñado para actuar de forma segura y controlada, facilitando la detención sin poner en riesgo a terceros.
+
+### ¿Funciona el GPS dentro de parqueos techados?
+Usamos antenas de alta ganancia y respaldo LBS. Si hay intento de **inhibición de señal**, el sistema genera alertas de interferencia para reacción inmediata.

@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Calendar, User, Clock } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import ShareButton from "@/components/common/ShareButton";
 import { Helmet } from "react-helmet-async";
 
@@ -93,6 +93,37 @@ export default function BlogPost() {
     if (slug) loadPost();
   }, [slug]);
 
+  const processed = useMemo(() => {
+    const raw = String(post?.content || "");
+    const normalized = raw.replace(/\r\n/g, "\n");
+    const lines = normalized.split("\n");
+    const faqHeadingIndex = lines.findIndex(l => /^##\s*Preguntas frecuentes(?:\s*\(FAQ\))?/i.test(l.trim()));
+    if (faqHeadingIndex === -1) {
+      return { content: post?.content, faqs: [] as { q: string; a: string }[] };
+    }
+    const content = lines.slice(0, faqHeadingIndex).join("\n").trim();
+    const rest = lines.slice(faqHeadingIndex + 1);
+    const faqs: { q: string; a: string }[] = [];
+    let currentQ = "";
+    let currentA: string[] = [];
+    for (const ln of rest) {
+      const qMatch = ln.match(/^###\s*(.+)\s*$/);
+      if (qMatch) {
+        if (currentQ && currentA.length) {
+          faqs.push({ q: currentQ.trim(), a: currentA.join("\n").trim() });
+        }
+        currentQ = qMatch[1];
+        currentA = [];
+      } else {
+        if (currentQ) currentA.push(ln);
+      }
+    }
+    if (currentQ && currentA.length) {
+      faqs.push({ q: currentQ.trim(), a: currentA.join("\n").trim() });
+    }
+    return { content, faqs };
+  }, [post?.content]);
+
   if (loading) {
     return (
         <Layout>
@@ -122,6 +153,8 @@ export default function BlogPost() {
   // Use the canonical URL for the share button, ensuring it doesn't have extra params
   // unless we explicitly want to bust cache, but cleaner is better for sharing.
   const pageUrl = `https://www.ticogps.com/blog/${post.slug}`;
+
+  
 
   return (
     <Layout
@@ -249,9 +282,42 @@ export default function BlogPost() {
                                 }
                             }}
                         >
-                            {post.content}
+                            {processed.content || post.content}
                         </ReactMarkdown>
                     </div>
+
+                    {processed.faqs.length > 0 && (
+                      <div className="mt-12">
+                        <h2 className="text-2xl md:text-3xl font-bold mt-2 mb-4">Preguntas frecuentes</h2>
+                        <div className="space-y-4">
+                          {processed.faqs.map((item, idx) => (
+                            <div key={idx} className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                              <button
+                                className="w-full text-left px-4 py-3 md:px-6 md:py-4 font-semibold flex items-center justify-between"
+                                onClick={(e) => {
+                                  const cont = (e.currentTarget.nextElementSibling as HTMLDivElement) || null;
+                                  if (!cont) return;
+                                  const isOpen = cont.style.maxHeight && cont.style.maxHeight !== "0px";
+                                  cont.style.maxHeight = isOpen ? "0px" : cont.scrollHeight + "px";
+                                  e.currentTarget.classList.toggle("text-primary");
+                                }}
+                                aria-expanded="false"
+                              >
+                                <span>{item.q}</span>
+                                <span className="text-2xl leading-none">+</span>
+                              </button>
+                              <div className="px-4 md:px-6 overflow-hidden transition-all duration-300 max-h-0">
+                                <div className="pb-4 text-slate-700 dark:text-slate-300">
+                                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                    {item.a}
+                                  </ReactMarkdown>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
 
                     <div className="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
                         <div className="font-bold text-slate-900 dark:text-white">

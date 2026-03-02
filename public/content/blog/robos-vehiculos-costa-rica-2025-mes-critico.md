@@ -73,3 +73,20 @@ Proteger un automóvil hoy significa tranquilidad, control y una respuesta inmed
 El cierre de 2025 confirma una realidad alarmante: los robos de vehículos en Costa Rica no solo aumentan, sino que se vuelven más agresivos y frecuentes. Esperar a ser víctima ya no es una opción.
 
 Adoptar medidas de seguridad avanzadas, como sistemas de rastreo GPS y hábitos responsables, marca la diferencia entre perderlo todo o reaccionar a tiempo. En un contexto de riesgo creciente, la prevención sigue siendo la mejor defensa.
+
+## Preguntas frecuentes (FAQ)
+
+### ¿Cuáles son las medidas más efectivas para evitar el robo del vehículo?
+Combinar **rastreo GPS con alertas de movimiento**, estacionar en zonas iluminadas, evitar rutinas previsibles y usar bloqueadores físicos. La tecnología mejora reacción y recuperación.
+
+### ¿Qué debo hacer inmediatamente si roban mi auto?
+No confronte. Llame al 9-1-1, comparta el enlace de rastreo si cuenta con TicoGPS y active el **apagado remoto** cuando sea seguro. Coordine con autoridades para la interceptación.
+
+### ¿El seguro es suficiente para proteger mi patrimonio?
+El seguro cubre pérdidas económicas según póliza, pero **no recupera** el vehículo por sí solo. El GPS aumenta las probabilidades de recuperación y reduce tiempos.
+
+### ¿Sirve el GPS si los ladrones intentan bloquear la señal?
+Nuestros equipos detectan **interferencias** y envían alertas de pérdida de conexión, además de apoyarse en triangulación celular (LBS) para mantener ubicación y comunicación.
+
+### ¿Cómo puedo monitorear mi auto 24/7 desde el celular?
+Con la app y plataforma web de TicoGPS: ubicación en tiempo real, historial de recorridos, alertas de movimiento y encendido no autorizado, y corte de motor seguro.

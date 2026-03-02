@@ -68,3 +68,20 @@ Ya sea a través de nuestra App Móvil (Android/iOS) para monitoreo individual o
 Si buscas honestidad, precios competitivos y un trato profesional que respete tu vehículo, TicoGPS es tu mejor opción en Costa Rica.
 
 ¿Listo para proteger tu inversión? [**Contáctanos hoy mismo**](/contacto) y cotiza la seguridad que tu vehículo necesita.
+
+## Preguntas frecuentes (FAQ)
+
+### ¿TicoGPS tiene cobertura nacional real?
+Sí. Operamos en las 7 provincias de Costa Rica con soporte local y técnicos certificados. La plataforma funciona en todo el territorio con señal optimizada.
+
+### ¿Cuál es la diferencia entre instalación en taller y a domicilio?
+En taller reduces tiempos técnicos y pruebas con equipamiento completo; a domicilio priorizas comodidad y evitás traslados. En ambos casos la instalación es profesional.
+
+### ¿Conviene suscripción o compra del equipo?
+Depende de tu operación. Suscripción integra servicio continuo y mantenimiento; compra de equipo favorece inversión única con acceso a plataforma. Te asesoramos según tu caso.
+
+### ¿Cómo ayuda TicoGPS a recuperar un vehículo robado?
+Con rastreo en tiempo real, alertas de movimiento y **apagado remoto seguro**. Coordinamos protocolos con autoridades para la interceptación sin riesgo.
+
+### ¿Qué soporte recibo en incidentes fuera de horario?
+Brindamos atención humana **24/7** con prioridades de emergencia para incidentes críticos, tanto para particulares como para flotas corporativas.

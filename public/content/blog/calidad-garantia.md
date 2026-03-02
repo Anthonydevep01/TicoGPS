@@ -55,3 +55,20 @@ Nuestros técnicos se desplazan a su casa, oficina o predio, garantizando una in
 En TicoGPS, nuestros valores de honestidad y responsabilidad son el motor de nuestro negocio. Ofrecemos los rangos de precios más competitivos del mercado, con modalidades flexibles de suscripción o venta directa, porque creemos que la seguridad debe ser accesible para todos.
 
 No deje la seguridad de su patrimonio en manos de la suerte. Elija experiencia, elija respaldo local, elija TicoGPS.
+
+## Preguntas frecuentes (FAQ)
+
+### ¿Qué cobertura de garantía ofrece TicoGPS para los dispositivos GPS?
+Nuestra garantía cubre defectos de fabricación y fallas del equipo conforme a las mejores prácticas del sector. Además, brindamos soporte técnico 24/7 para diagnóstico remoto y reemplazos cuando corresponde.
+
+### ¿El soporte 24/7 incluye asistencia en emergencias por robo?
+Sí. Contamos con canales prioritarios de atención para incidentes críticos. Le ayudamos con rastreo en tiempo real, coordinación con autoridades y recomendaciones de protocolo para recuperación segura.
+
+### ¿Realizan instalación a domicilio en todo Costa Rica?
+Sí. Ofrecemos instalación profesional en su casa u oficina en el GAM y cobertura nacional coordinada. También puede visitar nuestro taller en Cartago si lo prefiere.
+
+### ¿Los equipos funcionan en autos particulares, flotas y maquinaria?
+Sí. Trabajamos con plataformas y hardware compatibles con autos, taxis, autobuses, camiones y maquinaria pesada, incluyendo funciones como horas motor y reportes avanzados.
+
+### ¿Puedo elegir entre suscripción o compra del equipo?
+Sí. Disponemos de esquemas flexibles: suscripción con servicio integral o compra del dispositivo con acceso a plataforma, según su preferencia y operación.

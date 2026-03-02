@@ -14,14 +14,7 @@ export default defineConfig({
     sourcemap: 'hidden',
   },
   plugins: [
-    react({
-      babel: {
-        plugins: [
-          // Only include react-dev-locator in development
-          ...(process.env.NODE_ENV === 'development' ? ['react-dev-locator'] : []),
-        ],
-      },
-    }),
+    react(),
     tsconfigPaths()
   ],
 })

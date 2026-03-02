@@ -56,3 +56,20 @@ Además, un accidente o infracción grave puede generar costos mucho mayores que
 Las multas de tránsito en Costa Rica para 2026 efectivamente bajan, y la rebaja ya está aplicada. Sin embargo, el mensaje es claro: conducir con responsabilidad sigue siendo la mejor forma de evitar sanciones, gastos innecesarios y riesgos mayores.
 
 Estar informado sobre los nuevos montos ayuda a planificar, pero la verdadera prevención está en la conducción consciente y en el monitoreo constante del vehículo.
+
+## Preguntas frecuentes (FAQ)
+
+### ¿Cómo se clasifican las multas de tránsito en 2026?
+En **A, B y C** según gravedad: A (más graves), B (alto impacto) y C (administrativas). La estructura se mantiene y los montos se ajustan por IPC.
+
+### ¿Dónde consulto los montos actualizados de las multas?
+Puede revisar medios oficiales y notas especializadas (CRHoy, Observador, La Nación, Telediario). Verifique siempre fuentes actuales y la Ley de Tránsito vigente.
+
+### ¿Por qué bajaron las multas este año?
+Por el **IPC negativo**. La normativa recalcula montos usando indicadores económicos, resultando en una disminución frente a 2025.
+
+### ¿Cómo impacta el monitoreo GPS en la seguridad vial?
+El GPS ayuda a prevenir conductas riesgosas y facilita evidencia de recorridos. En caso de incidente, mejora reacción y logística de recuperación.
+
+### ¿Las rebajas significan menos controles?
+No. Las autoridades mantienen la prioridad de **proteger la vida**. Conducción responsable y cumplimiento de la ley siguen siendo esenciales.
