@@ -41,9 +41,9 @@ export default function Header() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50 border-b-2 border-slate-200">
       {/* Top Bar */}
-      <div className="bg-ebony text-white py-2 text-xs sm:text-sm font-semibold">
+      <div className="bg-ebony text-white py-1 text-[11px] sm:text-xs font-semibold">
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <a href="https://www.google.com/maps/place/TicoGPS/@9.8617368,-83.9175622,20.5z/data=!4m6!3m5!1s0x8fa0df9945df90fd:0xcbf3946366101ca0!8m2!3d9.8617812!4d-83.9173914!16s%2Fg%2F11msx65ymn!5m1!1e1?hl=es&entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-accent">
               <MapPin className="h-3 w-3 sm:h-4 sm:w-4" />
               Cartago, Costa Rica
@@ -53,7 +53,7 @@ export default function Header() {
               +506 8953-5649
             </a>
           </div>
-          <div className="flex gap-4 items-center">
+          <div className="flex gap-3 items-center">
             <a href="https://www.facebook.com/profile.php?id=61585416941658" target="_blank" rel="noopener noreferrer" className="hover:text-accent">Facebook</a>
             <a href="https://www.instagram.com/ticogpscr" target="_blank" rel="noopener noreferrer" className="hover:text-accent">Instagram</a>
             <ShareButton className="hover:text-accent text-white" />
@@ -70,13 +70,13 @@ export default function Header() {
 
       {/* Main Nav */}
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-20 sm:h-24">
+        <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <img 
               src="/images/TicoGPS-large-logo.webp" 
               alt="TicoGPS" 
-              className="h-20 w-auto object-contain" 
+              className="h-16 w-auto object-contain" 
               width={356} 
               height={196}
               decoding="async"
