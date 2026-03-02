@@ -95,6 +95,28 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
   }
+
+  /* Show a slim dark gray scrollbar only on hover */
+  .scrollbar-hover {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hover::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .scrollbar-hover:hover {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #1E3A8A transparent; /* dark blue thumb */
+  }
+  .scrollbar-hover:hover::-webkit-scrollbar {
+    width: 6px; /* WebKit */
+    height: 6px;
+  }
+  .scrollbar-hover:hover::-webkit-scrollbar-thumb {
+    background-color: #1E3A8A; /* dark blue */
+    border-radius: 9999px;
+  }
 }
  
 @layer base {

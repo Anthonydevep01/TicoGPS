@@ -377,41 +377,43 @@ export default function BlogPost() {
                 <aside className="lg:col-span-3 space-y-8">
                     <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 sticky top-24">
                         <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Últimas noticias</h3>
-                        {recentLoading ? (
-                          <div className="space-y-3">
-                            <div className="h-24 bg-slate-100 dark:bg-slate-800 rounded-lg animate-pulse" />
-                            <div className="h-24 bg-slate-100 dark:bg-slate-800 rounded-lg animate-pulse" />
-                            <div className="h-24 bg-slate-100 dark:bg-slate-800 rounded-lg animate-pulse" />
-                          </div>
-                        ) : (
-                          <div className="space-y-4">
-                            {recent.map((r) => (
-                              <Link
-                                key={r.slug}
-                                to={`/blog/${r.slug}`}
-                                className="group block"
-                              >
-                                <div className="rounded-lg overflow-hidden border border-slate-100 dark:border-slate-800">
-                                  <img
-                                    src={r.image}
-                                    alt={r.title}
-                                    className="w-full h-28 object-cover"
-                                    loading="lazy"
-                                    decoding="async"
-                                  />
-                                </div>
-                                <div className="mt-2">
-                                  <h4 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors line-clamp-2">
-                                    {r.title}
-                                  </h4>
-                                  <p className="text-xs text-slate-500">
-                                    TicoGPS — {r.date}
-                                  </p>
-                                </div>
-                              </Link>
-                            ))}
-                          </div>
-                        )}
+                        <div className="scrollbar-hover sm:max-h-[40vh] md:max-h-[60vh] lg:max-h-[70vh] overflow-y-auto pr-1">
+                          {recentLoading ? (
+                            <div className="space-y-3">
+                              <div className="h-24 bg-slate-100 dark:bg-slate-800 rounded-lg animate-pulse" />
+                              <div className="h-24 bg-slate-100 dark:bg-slate-800 rounded-lg animate-pulse" />
+                              <div className="h-24 bg-slate-100 dark:bg-slate-800 rounded-lg animate-pulse" />
+                            </div>
+                          ) : (
+                            <div className="space-y-4">
+                              {recent.map((r) => (
+                                <Link
+                                  key={r.slug}
+                                  to={`/blog/${r.slug}`}
+                                  className="group block"
+                                >
+                                  <div className="rounded-lg overflow-hidden border border-slate-100 dark:border-slate-800">
+                                    <img
+                                      src={r.image}
+                                      alt={r.title}
+                                      className="w-full h-28 object-cover"
+                                      loading="lazy"
+                                      decoding="async"
+                                    />
+                                  </div>
+                                  <div className="mt-2">
+                                    <h4 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors line-clamp-2">
+                                      {r.title}
+                                    </h4>
+                                    <p className="text-xs text-slate-500">
+                                      TicoGPS — {r.date}
+                                    </p>
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
 
                         <div className="mt-8 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg">
                             <h4 className="font-bold text-sm mb-2 text-slate-900 dark:text-white">¿Necesitas Asesoría?</h4>
