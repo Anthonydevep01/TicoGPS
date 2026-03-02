@@ -167,7 +167,7 @@ export const products: Product[] = [
     id: "gps-tracker-vehicular",
     name: "Dispositivo GPS Tracker Vehicular",
     description: "Dispositivo para el control y administracion remota de vehiculos. Hecho para: Anti-robo, Logistica industrial, administracion de vehiculos oficiales.",
-    price: "₡87,000",
+    price: "₡90,000",
     images: ["/images/TicoGPS-GPS01.jpeg", "/images/TicoGPS-GPS01-02.jpeg"],
     category: ["GPS"],
     brand: "TicoGPS",
