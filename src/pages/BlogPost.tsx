@@ -47,6 +47,8 @@ export default function BlogPost() {
   const { slug } = useParams();
   const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
+  const [recent, setRecent] = useState<BlogPost[]>([]);
+  const [recentLoading, setRecentLoading] = useState(true);
 
   useEffect(() => {
     const loadPost = async () => {
@@ -92,6 +94,47 @@ export default function BlogPost() {
 
     if (slug) loadPost();
   }, [slug]);
+
+  // Load recent posts for sidebar
+  useEffect(() => {
+    const loadRecent = async () => {
+      try {
+        const files = [
+          'ticogps-experto-seguridad.md',
+          'calidad-garantia.md',
+          'robos-vehiculos-costa-rica-2025-mes-critico.md',
+          'multas-transito-costa-rica-2026-rebajas.md',
+          'robo-vehiculos-centros-comerciales-costa-rica-protocolos.md',
+          'cocherazo-nocturno-costa-rica-seguridad.md'
+        ];
+        const list: BlogPost[] = [];
+        for (const file of files) {
+          const r = await fetch(`/content/blog/${file}`);
+          if (!r.ok) continue;
+          const text = await r.text();
+          const { data, content } = parseFrontmatter(text);
+          list.push({
+            slug: data.slug || '',
+            title: data.title || 'Sin título',
+            date: data.date || '',
+            author: data.author || '',
+            image: data.image || '',
+            excerpt: data.excerpt || data.meta_description || content.slice(0, 160),
+            category: data.category || '',
+            content
+          });
+        }
+        list.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+        setRecent(list.slice(0, 5));
+      } catch (e) {
+        console.error('Error loading recent posts:', e);
+        setRecent([]);
+      } finally {
+        setRecentLoading(false);
+      }
+    };
+    loadRecent();
+  }, []);
 
   const processed = useMemo(() => {
     const raw = String(post?.content || "");
@@ -333,18 +376,42 @@ export default function BlogPost() {
                 {/* Right Column: Sidebar */}
                 <aside className="lg:col-span-3 space-y-8">
                     <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 sticky top-24">
-                        <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Índice Relacionado</h3>
-                        <nav className="flex flex-col gap-2">
-                             <a href="#" className="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors py-1 border-b border-slate-50 dark:border-slate-800">
-                                Mantenimiento Preventivo
-                             </a>
-                             <a href="#" className="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors py-1 border-b border-slate-50 dark:border-slate-800">
-                                Ahorro de Combustible
-                             </a>
-                             <a href="#" className="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors py-1 border-b border-slate-50 dark:border-slate-800">
-                                Seguridad de Flotas
-                             </a>
-                        </nav>
+                        <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Últimas noticias</h3>
+                        {recentLoading ? (
+                          <div className="space-y-3">
+                            <div className="h-24 bg-slate-100 dark:bg-slate-800 rounded-lg animate-pulse" />
+                            <div className="h-24 bg-slate-100 dark:bg-slate-800 rounded-lg animate-pulse" />
+                            <div className="h-24 bg-slate-100 dark:bg-slate-800 rounded-lg animate-pulse" />
+                          </div>
+                        ) : (
+                          <div className="space-y-4">
+                            {recent.map((r) => (
+                              <Link
+                                key={r.slug}
+                                to={`/blog/${r.slug}`}
+                                className="group block"
+                              >
+                                <div className="rounded-lg overflow-hidden border border-slate-100 dark:border-slate-800">
+                                  <img
+                                    src={r.image}
+                                    alt={r.title}
+                                    className="w-full h-28 object-cover"
+                                    loading="lazy"
+                                    decoding="async"
+                                  />
+                                </div>
+                                <div className="mt-2">
+                                  <h4 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors line-clamp-2">
+                                    {r.title}
+                                  </h4>
+                                  <p className="text-xs text-slate-500">
+                                    TicoGPS — {r.date}
+                                  </p>
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                        )}
 
                         <div className="mt-8 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg">
                             <h4 className="font-bold text-sm mb-2 text-slate-900 dark:text-white">¿Necesitas Asesoría?</h4>
