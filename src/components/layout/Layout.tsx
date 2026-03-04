@@ -38,7 +38,7 @@ export default function Layout({ children, seo }: LayoutProps) {
     }
   };
 
-  const host = 'https://www.ticogps.com';
+  const host = 'https://ticogps.com';
   const segmentNames: Record<string, string> = {
     servicios: 'Servicios',
     productos: 'Productos',
