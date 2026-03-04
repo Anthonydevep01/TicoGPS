@@ -2,8 +2,8 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.ticogps.com" }],
-      "destination": "https://ticogps.com/:path*",
+      "has": [{ "type": "host", "value": "ticogps.com" }],
+      "destination": "https://www.ticogps.com/:path*",
       "statusCode": 308
     }
   ],

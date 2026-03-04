@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 // Configuration
 const DIST_DIR = path.resolve(__dirname, '../dist');
 const BLOG_DIR = path.resolve(__dirname, '../public/content/blog');
-const BASE_URL = 'https://ticogps.com';
+const BASE_URL = 'https://www.ticogps.com';
 
 // Read the production index.html template
 const indexHtmlPath = path.join(DIST_DIR, 'index.html');

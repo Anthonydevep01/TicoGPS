@@ -107,7 +107,7 @@ export default function Blog() {
       seo={{
         title: "Blog TicoGPS | Noticias y Consejos de Seguridad",
         description: "Artículos sobre rastreo GPS, seguridad vehicular, mantenimiento de flotas y tecnología en Costa Rica.",
-        canonical: "https://ticogps.com/blog"
+        canonical: "https://www.ticogps.com/blog"
       }}
     >
       {!loading && posts.length > 0 && (
@@ -119,7 +119,7 @@ export default function Blog() {
               "itemListElement": posts.map((p, i) => ({
                 "@type": "ListItem",
                 "position": i + 1,
-                "url": `https://ticogps.com/blog/${p.slug}`
+                "url": `https://www.ticogps.com/blog/${p.slug}`
               }))
             })}
           </script>
