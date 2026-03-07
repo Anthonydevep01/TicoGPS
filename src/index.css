@@ -130,18 +130,100 @@
 }
 
 @layer components {
+  .article-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .article-table-wrapper.scrollbar-invisible {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .article-table-wrapper.scrollbar-invisible::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
   .prose table {
     width: 100%;
-    min-width: 640px;
+    max-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 0.75rem;
+    border: 1px solid hsl(var(--border));
+    background-color: hsl(var(--card));
+    table-layout: fixed;
+  }
+  /* Dedicated responsive table for article content */
+  .article-table,
+  .prose table {
+    width: 100%;
     border-collapse: separate;
     border-spacing: 0;
     overflow: hidden;
     border-radius: 0.75rem;
     border: 1px solid hsl(var(--border));
     background-color: hsl(var(--card));
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  }
+  .article-table thead th,
+  .prose table thead th {
+    background-color: hsl(var(--muted));
+    font-weight: 700;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid hsl(var(--border));
+  }
+  .article-table tbody td,
+  .prose table tbody td {
+    padding: 0.75rem 1rem;
+    vertical-align: top;
+    background-color: hsl(var(--card));
+    word-break: break-word;
+    hyphens: auto;
+    white-space: normal;
+  }
+  .article-table tbody tr + tr td,
+  .prose table tbody tr + tr td {
+    border-top: 1px solid hsl(var(--border));
+  }
+  .article-table thead th + th,
+  .article-table tbody td + td,
+  .prose table thead th + th,
+  .prose table tbody td + td {
+    border-left: 1px solid hsl(var(--border));
+  }
+  @media (max-width: 640px) {
+    .article-table,
+    .prose table {
+      display: block;
+      border-radius: 0.75rem;
+    }
+    .article-table thead,
+    .prose table thead {
+      display: none;
+    }
+    .article-table tbody,
+    .prose table tbody {
+      display: block;
+    }
+    .article-table tbody tr,
+    .prose table tbody tr {
+      display: block;
+      border-top: 1px solid hsl(var(--border));
+    }
+    .article-table tbody td,
+    .prose table tbody td {
+      display: block;
+      padding: 0.6rem 0.75rem;
+      font-size: 0.95rem;
+    }
+    .article-table tbody td::before,
+    .prose table tbody td::before {
+      content: attr(data-label);
+      display: block;
+      font-weight: 700;
+      color: hsl(var(--foreground));
+      margin-bottom: 0.25rem;
+    }
   }
   .prose thead th {
     background-color: hsl(var(--muted));

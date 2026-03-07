@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Calendar, User, Clock } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import ShareButton from "@/components/common/ShareButton";
 import { Helmet } from "react-helmet-async";
 
@@ -145,6 +145,22 @@ export default function BlogPost() {
     return { content, faqs };
   }, [post?.content]);
 
+  const contentRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const root = contentRef.current;
+    if (!root) return;
+    const tables = Array.from(root.querySelectorAll('table'));
+    tables.forEach((table) => {
+      const headers = Array.from(table.querySelectorAll('thead th')).map(th => (th.textContent || '').trim());
+      table.querySelectorAll('tbody tr').forEach((tr) => {
+        const tds = Array.from(tr.querySelectorAll('td'));
+        tds.forEach((td, i) => {
+          if (headers[i]) td.setAttribute('data-label', headers[i]);
+        });
+      });
+    });
+  }, [processed.content]);
+
   if (loading) {
     return (
         <Layout>
@@ -267,7 +283,7 @@ export default function BlogPost() {
                 <article className="lg:col-span-7 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 p-8 md:p-12">
                     {/* Featured image inside content removed to avoid duplication */}
 
-                    <div className="prose prose-lg dark:prose-invert max-w-none 
+                    <div ref={contentRef} className="prose prose-lg dark:prose-invert max-w-none 
                         prose-headings:font-bold prose-headings:text-slate-900 dark:prose-headings:text-white
                         prose-p:text-slate-600 dark:prose-p:text-slate-300 prose-p:leading-relaxed
                         prose-a:text-primary prose-a:font-bold prose-a:underline prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:text-primary/80
