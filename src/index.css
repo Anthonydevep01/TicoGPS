@@ -128,3 +128,34 @@
     color: hsl(var(--foreground));
   }
 }
+
+@layer components {
+  .prose table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    border: 1px solid hsl(var(--border));
+    background-color: hsl(var(--card));
+  }
+  .prose thead th {
+    background-color: hsl(var(--muted));
+    font-weight: 700;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid hsl(var(--border));
+  }
+  .prose tbody td {
+    padding: 0.75rem 1rem;
+    vertical-align: top;
+    background-color: hsl(var(--card));
+  }
+  .prose tbody tr + tr td {
+    border-top: 1px solid hsl(var(--border));
+  }
+  .prose thead th + th,
+  .prose tbody td + td {
+    border-left: 1px solid hsl(var(--border));
+  }
+}
