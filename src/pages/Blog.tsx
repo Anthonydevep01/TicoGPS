@@ -36,7 +36,7 @@ const BLOG_POSTS_LIST = [
   'multas-transito-costa-rica-2026-rebajas.md',
   'robo-vehiculos-centros-comerciales-costa-rica-protocolos.md',
   'cocherazo-nocturno-costa-rica-seguridad.md',
-  'deportivos-alta-gama-costa-rica-bajnazo-encargo.md'
+  'deportivos-alta-gama-costa-rica-bajonazo-encargo.md'
 ];
 
 interface BlogPost {
