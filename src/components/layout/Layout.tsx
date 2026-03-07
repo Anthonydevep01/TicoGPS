@@ -76,7 +76,7 @@ export default function Layout({ children, seo }: LayoutProps) {
       {showBackButton && (
         <button
           onClick={handleBack}
-          className="fixed top-36 left-4 z-[9999] flex items-center gap-2 bg-ebony text-white px-4 py-2 rounded-md hover:bg-ebony/90 transition-all shadow-md text-sm font-medium animate-in fade-in zoom-in duration-300 border border-white/20"
+          className="fixed top-36 left-4 z-40 flex items-center gap-2 bg-ebony text-white px-4 py-2 rounded-md hover:bg-ebony/90 transition-all shadow-md text-sm font-medium animate-in fade-in zoom-in duration-300 border border-white/20"
         >
           <ArrowLeft className="h-4 w-4" />
           Volver
