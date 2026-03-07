@@ -132,12 +132,16 @@
 @layer components {
   .prose table {
     width: 100%;
+    min-width: 640px;
     border-collapse: separate;
     border-spacing: 0;
     overflow: hidden;
     border-radius: 0.75rem;
     border: 1px solid hsl(var(--border));
     background-color: hsl(var(--card));
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .prose thead th {
     background-color: hsl(var(--muted));
@@ -150,6 +154,9 @@
     padding: 0.75rem 1rem;
     vertical-align: top;
     background-color: hsl(var(--card));
+    word-break: break-word;
+    hyphens: auto;
+    white-space: normal;
   }
   .prose tbody tr + tr td {
     border-top: 1px solid hsl(var(--border));
@@ -157,5 +164,15 @@
   .prose thead th + th,
   .prose tbody td + td {
     border-left: 1px solid hsl(var(--border));
+  }
+  @media (max-width: 640px) {
+    .prose thead th {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.9rem;
+    }
+    .prose tbody td {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.9rem;
+    }
   }
 }
