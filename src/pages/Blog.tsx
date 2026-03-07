@@ -4,41 +4,6 @@ import { ArrowRight, Calendar, User, Clock } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
-// Simple custom frontmatter parser to avoid gray-matter browser issues
-const parseFrontmatter = (text: string) => {
-  const match = text.match(/^---([\s\S]*?)---([\s\S]*)$/);
-  if (!match) return { data: {}, content: text };
-
-  const frontmatterRaw = match[1];
-  const content = match[2].trim();
-  const data: Record<string, string> = {};
-
-  frontmatterRaw.split('\n').forEach(line => {
-    const [key, ...valueParts] = line.split(':');
-    if (key && valueParts.length > 0) {
-      let value = valueParts.join(':').trim();
-      // Remove quotes if present
-      if (value.startsWith('"') && value.endsWith('"')) {
-        value = value.slice(1, -1);
-      }
-      data[key.trim()] = value;
-    }
-  });
-
-  return { data, content };
-};
-
-// In a real app, this list would be generated dynamically or fetched from an API/JSON index
-const BLOG_POSTS_LIST = [
-  'ticogps-experto-seguridad.md',
-  'calidad-garantia.md',
-  'robos-vehiculos-costa-rica-2025-mes-critico.md',
-  'multas-transito-costa-rica-2026-rebajas.md',
-  'robo-vehiculos-centros-comerciales-costa-rica-protocolos.md',
-  'cocherazo-nocturno-costa-rica-seguridad.md',
-  'deportivos-alta-gama-costa-rica-bajonazo-encargo.md'
-];
-
 interface BlogPost {
   slug: string;
   title: string;
@@ -47,7 +12,6 @@ interface BlogPost {
   image: string;
   excerpt: string;
   category: string;
-  content: string;
 }
 
 export default function Blog() {
@@ -58,32 +22,12 @@ export default function Blog() {
   useEffect(() => {
     const loadPosts = async () => {
       try {
-        const loadedPosts: BlogPost[] = [];
-        
-        for (const fileName of BLOG_POSTS_LIST) {
-          // Fetch from public folder
-          const response = await fetch(`/content/blog/${fileName}`);
-          if (response.ok) {
-            const text = await response.text();
-            const { data, content } = parseFrontmatter(text);
-            
-            loadedPosts.push({
-              slug: data.slug || '',
-              title: data.title || 'Sin título',
-              date: data.date || '',
-              author: data.author || '',
-              image: data.image || '',
-              excerpt: data.excerpt || data.meta_description || content.slice(0, 160),
-              category: data.category || '',
-              content: content
-            });
-          }
-        }
-
-        // Sort by date descending
-        loadedPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-        setPosts(loadedPosts);
+        const response = await fetch('/blog-index.json');
+        if (!response.ok) throw new Error('blog-index.json not found');
+        const list = await response.json() as BlogPost[];
+        // Already sorted by generator, but ensure descending
+        list.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+        setPosts(list);
       } catch (error) {
         console.error("Error loading blog posts:", error);
       } finally {

@@ -99,31 +99,9 @@ export default function BlogPost() {
   useEffect(() => {
     const loadRecent = async () => {
       try {
-        const files = [
-          'ticogps-experto-seguridad.md',
-          'calidad-garantia.md',
-          'robos-vehiculos-costa-rica-2025-mes-critico.md',
-          'multas-transito-costa-rica-2026-rebajas.md',
-          'robo-vehiculos-centros-comerciales-costa-rica-protocolos.md',
-          'cocherazo-nocturno-costa-rica-seguridad.md'
-        ];
-        const list: BlogPost[] = [];
-        for (const file of files) {
-          const r = await fetch(`/content/blog/${file}`);
-          if (!r.ok) continue;
-          const text = await r.text();
-          const { data, content } = parseFrontmatter(text);
-          list.push({
-            slug: data.slug || '',
-            title: data.title || 'Sin título',
-            date: data.date || '',
-            author: data.author || '',
-            image: data.image || '',
-            excerpt: data.excerpt || data.meta_description || content.slice(0, 160),
-            category: data.category || '',
-            content
-          });
-        }
+        const r = await fetch('/blog-index.json');
+        if (!r.ok) throw new Error('blog-index.json not found');
+        const list = await r.json() as BlogPost[];
         list.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
         setRecent(list.slice(0, 5));
       } catch (e) {

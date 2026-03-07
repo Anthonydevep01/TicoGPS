@@ -40,6 +40,7 @@ function parseFrontmatter(content) {
 }
 
 // Process blog posts
+const indexEntries = [];
 fs.readdirSync(BLOG_DIR).forEach(file => {
   if (!file.endsWith('.md')) return;
 
@@ -144,6 +145,22 @@ fs.readdirSync(BLOG_DIR).forEach(file => {
   // Write the pre-rendered HTML
   fs.writeFileSync(path.join(postDir, 'index.html'), postHtml);
   console.log(`Generated static page for: ${meta.slug}`);
+
+  // Collect index entry
+  indexEntries.push({
+    slug: meta.slug,
+    title: meta.title || '',
+    date: meta.date || '',
+    author: meta.author || 'TicoGPS',
+    image: meta.image || '',
+    excerpt: meta.excerpt || meta.meta_description || '',
+    category: meta.category || '',
+  });
 });
+
+// Write blog index JSON sorted by date desc
+indexEntries.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+const indexPath = path.resolve(__dirname, '../public/blog-index.json');
+fs.writeFileSync(indexPath, JSON.stringify(indexEntries, null, 2));
 
 console.log('Blog static generation complete.');
