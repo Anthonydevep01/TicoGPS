@@ -172,6 +172,12 @@
     padding: 0.75rem 1rem;
     border-bottom: 2px solid hsl(var(--border));
   }
+  /* Highlight first column cells for better readability */
+  .article-table tbody td:first-child,
+  .prose table tbody td:first-child {
+    background-color: hsl(var(--muted) / 0.12);
+    font-weight: 700;
+  }
   .article-table tbody td,
   .prose table tbody td {
     padding: 0.75rem 1rem;
@@ -216,13 +222,18 @@
       padding: 0.6rem 0.75rem;
       font-size: 0.95rem;
     }
+    /* Mobile labels styled like header cells */
     .article-table tbody td::before,
     .prose table tbody td::before {
       content: attr(data-label);
       display: block;
       font-weight: 700;
       color: hsl(var(--foreground));
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.4rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.5rem;
+      background-color: hsl(var(--muted));
+      border: 1px solid hsl(var(--border));
     }
   }
   .prose thead th {
