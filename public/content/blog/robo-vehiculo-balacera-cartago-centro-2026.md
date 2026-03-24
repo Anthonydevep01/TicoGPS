@@ -40,6 +40,8 @@ Contar con un sistema avanzado de [servicios de rastreo satelital](/servicios) i
 
 Para dimensionar el impacto de la tecnología en la resolución de incidentes críticos, analizamos el contraste en los tiempos de respuesta y la eficiencia del despliegue policial:
 
+---
+
 | Fase del Incidente | Protocolo Tradicional (Sin Tecnología Activa) | Inteligencia Tecnológica (Con Rastreo Satelital) |
 | :--- | :--- | :--- |
 | **Reacción Inmediata** | La víctima busca auxilio tras el shock para llamar al 9-1-1. | Activación del Botón de Pánico oculto durante el abandono del vehículo. |

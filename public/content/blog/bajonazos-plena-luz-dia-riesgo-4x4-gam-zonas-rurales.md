@@ -44,6 +44,8 @@ La instalación de sistemas avanzados de [rastreo satelital](/productos) permite
 
 Para ilustrar la importancia de la preparación tecnológica frente al asalto, la siguiente tabla detalla la abismal diferencia entre una reacción instintiva (que pone en riesgo la vida y el patrimonio) y una reacción basada en protocolos de seguridad activa:
 
+---
+
 | Fase del Asalto | Reacción Instintiva (Alto Riesgo) | Reacción Protocolar Tecnológica (Bajo Riesgo) |
 | :--- | :--- | :--- |
 | **Abordaje Armado** | Negación, forcejeo o intento de evasión vehicular. | Manos visibles, entrega de llaves y abandono del habitáculo. |
