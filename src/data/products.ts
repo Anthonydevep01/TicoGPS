@@ -186,7 +186,7 @@ export const products: Product[] = [
     id: "gps-basico-vehiculo",
     name: "GPS 4G para vehiculo",
     description: "Solución de rastreo esencial para vehículos particulares y pequeñas flotas. Monitoreo confiable y funciones de seguridad estándar.",
-    price: "₡75,000",
+    price: "₡80,000",
     images: ["/images/TicoGPS-GPS02.jpeg", "/images/TicoGPS-GPS03.jpeg"],
     category: ["GPS"],
     brand: "TicoGPS",
