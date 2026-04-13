@@ -12,7 +12,6 @@ export default function Home() {
             src="/images/TicoGPS-main-banner.webp" 
             alt="Rastreo Satelital Costa Rica" 
             className="w-full h-full object-cover opacity-40"
-            fetchPriority="high"
             width="1920"
             height="1080"
             decoding="async"

@@ -39,6 +39,7 @@ export default function Footer() {
               <li><Link to="/servicios" className="hover:text-white hover:underline transition-all">Servicios</Link></li>
               <li><Link to="/productos" className="hover:text-white hover:underline transition-all">Productos</Link></li>
               <li><Link to="/blog" className="hover:text-white hover:underline transition-all">Blog</Link></li>
+              <li><a href="/docs/guia-funciones-gps-j16.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white hover:underline transition-all">Guía de Funciones GPS (PDF)</a></li>
               <li><Link to="/contacto" className="hover:text-white hover:underline transition-all">Contacto</Link></li>
               <li><Link to="/terminos-condiciones" className="hover:text-white hover:underline transition-all">Términos y Condiciones</Link></li>
               <li><Link to="/politica-privacidad" className="hover:text-white hover:underline transition-all">Política de Privacidad</Link></li>
